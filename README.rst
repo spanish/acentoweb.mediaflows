@@ -33,7 +33,8 @@ Tell me what your product does
 Features
 --------
 
-- Can be bullet points
+- Add Action and Person content types to Plone, with (related) views
+
 
 
 Examples
