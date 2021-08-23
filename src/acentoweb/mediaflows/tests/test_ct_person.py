@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from acentoweb.mediaflows.content.person import IPerson  # NOQA E501
 from acentoweb.mediaflows.testing import ACENTOWEB_MEDIAFLOWS_INTEGRATION_TESTING  # noqa
 from plone import api
 from plone.app.testing import setRoles
@@ -10,11 +11,6 @@ from zope.component import queryUtility
 import unittest
 
 
-try:
-    from plone.dexterity.schema import portalTypeToSchemaName
-except ImportError:
-    # Plone < 5
-    from plone.dexterity.utils import portalTypeToSchemaName
 
 
 class PersonIntegrationTest(unittest.TestCase):
@@ -30,8 +26,7 @@ class PersonIntegrationTest(unittest.TestCase):
     def test_ct_person_schema(self):
         fti = queryUtility(IDexterityFTI, name='Person')
         schema = fti.lookupSchema()
-        schema_name = portalTypeToSchemaName('Person')
-        self.assertEqual(schema_name, schema.getName())
+        self.assertEqual(IPerson, schema)
 
     def test_ct_person_fti(self):
         fti = queryUtility(IDexterityFTI, name='Person')
@@ -42,6 +37,12 @@ class PersonIntegrationTest(unittest.TestCase):
         factory = fti.factory
         obj = createObject(factory)
 
+        self.assertTrue(
+            IPerson.providedBy(obj),
+            u'IPerson not provided by {0}!'.format(
+                obj,
+            ),
+        )
 
     def test_ct_person_adding(self):
         setRoles(self.portal, TEST_USER_ID, ['Contributor'])
@@ -51,6 +52,12 @@ class PersonIntegrationTest(unittest.TestCase):
             id='person',
         )
 
+        self.assertTrue(
+            IPerson.providedBy(obj),
+            u'IPerson not provided by {0}!'.format(
+                obj.id,
+            ),
+        )
 
         parent = obj.__parent__
         self.assertIn('person', parent.objectIds())

@@ -10,7 +10,7 @@
       name="title">Person</property>
   <property
       i18n:translate=""
-      name="description">Person Content type</property>
+      name="description">A Person content type</property>
 
   <property name="allow_discussion">False</property>
   <property name="factory">Person</property>
@@ -21,10 +21,10 @@
   <property name="global_allow">True</property>
   <!-- Schema, class and security -->
   <property name="add_permission">acentoweb.mediaflows.AddPerson</property>
-  <property name="klass">plone.dexterity.content.Item</property>
-  <property name="model_file">acentoweb.mediaflows.content:person.xml</property>
+  <property name="klass">acentoweb.mediaflows.content.person.Person</property>
+  <property name="model_file"></property>
   <property name="model_source"></property>
-  <property name="schema"></property>
+  <property name="schema">acentoweb.mediaflows.content.person.IPerson</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
@@ -41,11 +41,11 @@
     <element value="plone.basic"/>
     <element value="plone.locking" />
     <!--<element value="plone.app.referenceablebehavior.referenceable.IReferenceable" />-->
-    <!--<element value="plone.leadimage"/>-->
+    <element value="plone.leadimage"/>
     <!--<element value="plone.relateditems"/>-->
-    <!--<element value="plone.richtext"/>-->
+    <element value="plone.richtext"/>
     <!--<element value="plone.tableofcontents"/>-->
-    <!--<element value="plone.versioning" />-->
+    <element value="plone.versioning" />
     <!--<element value="plone.translatable" />-->
   </property>
 
@@ -53,9 +53,9 @@
   <property name="add_view_expr">string:${folder_url}/++add++Person</property>
   <property name="default_view">view</property>
   <property name="default_view_fallback">False</property>
-  <property name="immediate_view">view</property>
+  <property name="immediate_view">person-view</property>
   <property name="view_methods">
-    <element value="view"/>
+    <element value="person-view"/>
   </property>
 
   <!-- Method aliases -->
