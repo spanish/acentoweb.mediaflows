@@ -6,7 +6,6 @@
       metal:use-macro="context/main_template/macros/master">
 <body>
   <metal:block fill-slot="content-core">
-      <!--p tal:content="view/msg">this gets replaced</p-->
 
       <figure tal:define="scale_func context/@@images;
                   scale context/@@images;
@@ -44,7 +43,7 @@
             </tal:define>
           </tal:repeat>
 
-        </tal:check><!-- end repeat loop-->
+        </tal:check>
 
   </metal:block>
 </body>
