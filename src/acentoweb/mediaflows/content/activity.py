@@ -30,6 +30,15 @@ class IActivity(model.Schema):
     )
 
 
+    directives.widget(
+        'relatedItems',
+        RelatedItemsFieldWidget,
+        pattern_options={
+            'selectableTypes': ['person', 'Person']
+        }
+    )
+
+
 
 
 
