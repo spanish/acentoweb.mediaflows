@@ -23,16 +23,26 @@ class PersonView(BrowserView):
         return self.index()
 
 
-    def get_relateditems(self, context = None):
+    #Both relations'ways' are kept, in case you want to refer 'the other way around later'
+    def get_relateditems(self):
+        """Returns related items. Note. The extra code is in case you want
+        to refer from 'both sides'
+        In other words: You want to relate activity to person AND person to
+        Activity """
+        #refs = (self.context.relatedItems)
+        #to_objects = [ref.to_object for ref in refs if not ref.isBroken()]
+        refers = self.get_referers(self.context)
+        from_objects = [ref.from_object for ref in refers if not ref.isBroken()]
+        #ref_list = to_objects + from_objects
+        ref_list = from_objects
+        return OrderedDict( (x,1) for x in ref_list ).keys()
+
+    def get_referers(self, context = None):
         """ Return a list of backreference relationvalues
         """
-        #import pdb; pdb.set_trace()
         catalog = getUtility(ICatalog)
         intids = getUtility(IIntIds)
         context = context and context or self.context
         rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
         rel_items = list(catalog.findRelations(rel_query))
-        #import pdb; pdb.set_trace()
         return rel_items
-
-        #return OrderedDict( (x.to_object()) for x in rel_items )

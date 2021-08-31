@@ -40,8 +40,14 @@
       name="acentoweb.mediaflows-hiddenprofiles"
       />
 
-  <!-- -*- extra stuff goes here -*- -->
+
 
   <include package=".views" />
+  <include package=".widgets" />
+
+  <!-- vocabulary is neccesary for multilingual sites -->
+  <utility
+    component=".vocabulary.PersonVocabulary"
+    name="acentoweb.mediaflows.PersonVocabulary" />
 
 </configure>

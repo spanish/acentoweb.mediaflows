@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="acentoweb.mediaflows">
+
+      <adapter factory=".widgets.RelatedItemsFieldWidget"
+               for="z3c.relationfield.interfaces.IRelationChoice
+                     acentoweb.mediaflows.interfaces.IAcentowebMediaflowsLayer"/>
+
+      <adapter factory=".widgets.RelatedItemsFieldWidget"
+              for="z3c.relationfield.interfaces.IRelationList
+                    acentoweb.mediaflows.interfaces.IAcentowebMediaflowsLayer"/>
+
+</configure>

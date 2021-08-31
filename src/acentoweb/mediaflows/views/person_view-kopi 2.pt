@@ -21,14 +21,13 @@
 
       <tal:check tal:condition="view/get_relateditems|None">
         <h2 i18n:translate="">Activitites </h2>
-         <ul tal:repeat="ref view/get_relateditems">
+         <tal:repeat tal:repeat="ref view/get_relateditems">
 
-          <tal:define tal:define="ref_obj nocall:ref/from_object">
+          <tal:define tal:define="ref_obj nocall:ref">
             <li  tal:define="scale_func ref_obj/@@images|None">
-
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
-
+                  <figure tal:condition="scaled_image">
                     <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
                       <img  class="image-popup"
                             tal:replace="structure python:scaled_image.tag()"
@@ -38,11 +37,11 @@
                           <h4>${ref_obj/Title|None}</h4>
                       </div>
                     </a>
-
+                  </figure>
                 </tal:define>
               </li>
             </tal:define>
-          </ul>
+          </tal:repeat>
 
         </tal:check>
 
