@@ -36,3 +36,20 @@ class PersonView(BrowserView):
         return rel_items
 
         #return OrderedDict( (x.to_object()) for x in rel_items )
+
+
+
+    def back_references(self, context = None):
+        """
+        Return back references
+        """
+        catalog = getUtility(ICatalog)
+        intids = getUtility(IIntIds)
+        result= []
+        context = context and context or self.context
+        rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
+        for rel in list(catalog.findRelations(rel_query)):
+            obj = intids.queryObject(rel.from_id)
+            if obj is not None and checkPermission('zope2.View', obj):
+                result.append(obj)
+        return result
