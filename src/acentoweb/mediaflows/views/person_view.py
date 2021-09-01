@@ -18,24 +18,19 @@ class PersonView(BrowserView):
     # template = ViewPageTemplateFile('person_view.pt')
 
     def __call__(self):
-        # Implement your own actions:
-        #self.msg = _(u'A small message')
         return self.index()
 
 
     def get_relateditems(self, context = None):
         """ Return a list of backreference relationvalues
         """
-        #import pdb; pdb.set_trace()
         catalog = getUtility(ICatalog)
         intids = getUtility(IIntIds)
         context = context and context or self.context
         rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
         rel_items = list(catalog.findRelations(rel_query))
-        #import pdb; pdb.set_trace()
         return rel_items
 
-        #return OrderedDict( (x.to_object()) for x in rel_items )
 
 
 
