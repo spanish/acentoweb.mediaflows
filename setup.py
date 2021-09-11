@@ -14,8 +14,8 @@ long_description = '\n\n'.join([
 
 setup(
     name='acentoweb.mediaflows',
-    version='1.0a1',
-    description="Activity & Person add-on Plone",
+    version='1.0a2',
+    description="Mediaflows add-on for Plone",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
     classifiers=[
@@ -29,8 +29,8 @@ setup(
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
     keywords='Python Plone CMS',
-    author='Espen Moe-Nilssen',
-    author_email='espen@medialog.no',
+    author='Acento Web',
+    author_email='correo@acentoweb.com',
     url='https://github.com/collective/acentoweb.mediaflows',
     project_urls={
         'PyPI': 'https://pypi.python.org/pypi/acentoweb.mediaflows',
@@ -53,6 +53,7 @@ setup(
         'plone.restapi',
         'plone.app.dexterity',
         'plone.app.relationfield',
+        'collective.easyform>=3.0.5',
     ],
     extras_require={
         'test': [

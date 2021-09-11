@@ -7,3 +7,10 @@ Changelog
 
 - Initial release.
   [espenmn]
+
+
+1.0a2 (unreleased)
+------------------
+
+- Second release.
+  [acentoweb]

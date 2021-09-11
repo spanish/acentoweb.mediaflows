@@ -1,4 +1,4 @@
-acentoweb.mediaflows Copyright 2021, Espen Moe-Nilssen
+acentoweb.mediaflows Copyright 2021, Espen Moe-Nilssen & Acento Web
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2
