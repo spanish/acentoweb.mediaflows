@@ -2,6 +2,10 @@
 <object name="portal_types" meta_type="Plone Types Tool">
   <property name="title">Controls the available contenttypes in your portal</property>
   <!--<object name="example_ct" meta_type="Dexterity FTI"/>-->
-  <object meta_type="Dexterity FTI" name="Person"/>
-  <object meta_type="Dexterity FTI" name="Activity"/>
+  <object meta_type="Dexterity FTI" name="MF Activity"/>
+  <object meta_type="Dexterity FTI" name="MF Congress"/>
+  <object meta_type="Dexterity FTI" name="MF Day"/>
+  <object meta_type="Dexterity FTI" name="MF Person"/>
+  <object meta_type="Dexterity FTI" name="MF Program"/>
+  <object meta_type="Dexterity FTI" name="MF Publication"/>
 </object>

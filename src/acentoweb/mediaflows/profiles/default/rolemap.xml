@@ -3,21 +3,48 @@
   <permissions>
   <!-- -*- extra stuff goes here -*- -->
 
-    <permission name="acentoweb.mediaflows: Add Activity" acquire="True">
+
+    <permission name="acentoweb.mediaflows: Add MF Activity" acquire="True">
       <role name="Manager"/>
       <role name="Site Administrator"/>
       <role name="Owner"/>
       <role name="Contributor"/>
     </permission>
 
-
-    <permission name="acentoweb.mediaflows: Add Person" acquire="True">
+    <permission name="acentoweb.mediaflows: Add MF Congress" acquire="True">
       <role name="Manager"/>
       <role name="Site Administrator"/>
       <role name="Owner"/>
       <role name="Contributor"/>
     </permission>
 
+    <permission name="acentoweb.mediaflows: Add MF Day" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+    <permission name="acentoweb.mediaflows: Add MF Person" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+    <permission name="acentoweb.mediaflows: Add MF Program" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+    <permission name="acentoweb.mediaflows: Add MF Publication" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
 
   </permissions>
 </rolemap>
