@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="acentoweb.mediaflows"
+      metal:use-macro="context/main_template/macros/master">
+<body>
+  <metal:block fill-slot="content-core">
+<!--
+      <figure tal:define="scale_func context/@@images;
+                  scale context/@@images;
+                  scaled_image python:scale_func.scale('image', scale='preview')"
+                  tal:on-error=""
+                  class="mf_person_image">
+              <img tal:replace="structure python:scaled_image.tag()"
+                   tal:condition="scaled_image" />
+               <figcaption class="padding-10-0" tal:condition="context/image_caption|nothing"
+                   tal:content="context/image_caption">
+               </figcaption>
+      </figure>
+-->  
+      <div tal:content="context/orcid|None" />
+      <div tal:content="context/mail|None" />
+      <div tal:content="context/web|None" />
+      <div tal:content="context/institution|None" />
+      <div tal:content="context/specialties|None" />
+      <div tal:content="context/work|None" />
+      <div tal:define="research_role context/research_role;research_role_yes python:research_role != 'None'" tal:condition="research_role_yes" tal:content="context/research_role" />
+      <div tal:define="research_sc context/research_sc;research_sc_yes python:research_sc != 'No'" tal:condition="research_sc_yes" tal:content="context/research_sc" />
+      <div tal:replace="structure context/text/output|None" />
+
+      <tal:check tal:condition="view/back_references|None">
+        <h2 i18n:translate="">Activities</h2>
+         <ul tal:repeat="ref view/back_references">
+           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" tal:condition="python:portal_type == 'MF Activity'">
+               <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
+                           tal:on-error="">
+                 <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
+                   <img  class="image-popup"
+                         tal:replace="structure python:scaled_image.tag()"
+                         tal:on-error=""
+                         tal:condition="scaled_image"/>
+                   <div>
+                     <h4>${ref/Title|None}</h4>
+                   </div>
+                 </a>
+               </tal:define>
+             </li>
+         </ul>
+      </tal:check>
+
+      <tal:check tal:condition="view/back_references|None">
+        <h2 i18n:translate="">Publications</h2>
+         <ul tal:repeat="ref view/back_references">
+           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" tal:condition="python:portal_type == 'MF Publication'">
+               <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
+                           tal:on-error="">
+                 <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
+                   <img  class="image-popup"
+                         tal:replace="structure python:scaled_image.tag()"
+                         tal:on-error=""
+                         tal:condition="scaled_image"/>
+                   <div>
+                     <h4>${ref/Title|None}</h4>
+                   </div>
+                 </a>
+               </tal:define>
+             </li>
+         </ul>
+      </tal:check>
+
+  </metal:block>
+</body>
+</html>
