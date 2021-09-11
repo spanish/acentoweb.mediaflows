@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-09-05 21:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../views/mf_person_view.pt:33
+msgid "Activities"
+msgstr ""
+
+#: ../profiles/default/types/MF_Activity.xml
+#: ../profiles/default/types/MF_Congress.xml
+#: ../profiles/default/types/MF_Day.xml
+msgid "Edit"
+msgstr ""
+
+#: ../configure.zcml:28
+msgid "Installs the acentoweb.mediaflows add-on."
+msgstr ""
+
+#: ../profiles/default/types/MF_Activity.xml
+msgid "MF Activity"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:75
+msgid "MF Assistants"
+msgstr ""
+
+#: ../views/mf_publication_view.pt:25
+msgid "MF Authors"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:50
+msgid "MF Communicators"
+msgstr ""
+
+#: ../profiles/default/types/MF_Congress.xml
+msgid "MF Congress"
+msgstr ""
+
+#: ../profiles/default/types/MF_Day.xml
+msgid "MF Day"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:100
+msgid "MF Moderators"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:126
+msgid "MF Organizers"
+msgstr ""
+
+#: ../profiles/default/types/MF_Person.xml
+msgid "MF Person"
+msgstr ""
+
+#: ../profiles/default/types/MF_Program.xml
+msgid "MF Program"
+msgstr ""
+
+#: ../profiles/default/types/MF_Publication.xml
+msgid "MF Publication"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:25
+msgid "MF Speakers"
+msgstr ""
+
+#: ../profiles/default/types/MF_Activity.xml
+msgid "Mediaflows Activity"
+msgstr ""
+
+#: ../profiles/default/types/MF_Congress.xml
+msgid "Mediaflows Congress"
+msgstr ""
+
+#: ../profiles/default/types/MF_Day.xml
+msgid "Mediaflows Day"
+msgstr ""
+
+#: ../profiles/default/types/MF_Person.xml
+msgid "Mediaflows Person"
+msgstr ""
+
+#: ../profiles/default/types/MF_Program.xml
+msgid "Mediaflows Program"
+msgstr ""
+
+#: ../profiles/default/types/MF_Publication.xml
+msgid "Mediaflows Publication"
+msgstr ""
+
+#: ../configure.zcml:37
+msgid "Uninstalls the acentoweb.mediaflows add-on."
+msgstr ""
+
+#: ../profiles/default/types/MF_Activity.xml
+#: ../profiles/default/types/MF_Congress.xml
+#: ../profiles/default/types/MF_Day.xml
+msgid "View"
+msgstr ""
+
+#: ../configure.zcml:28
+msgid "acentoweb.mediaflows"
+msgstr ""
+
+#: ../configure.zcml:37
+msgid "acentoweb.mediaflows (uninstall)"
+msgstr ""
+
+#. Default: "MF Assistants"
+#: ../content/mf_activity.py:44
+msgid "label_related_assistants"
+msgstr ""
+
+#. Default: "MF Authors"
+#: ../content/mf_publication.py:23
+msgid "label_related_authors"
+msgstr ""
+
+#. Default: "MF Communicators"
+#: ../content/mf_activity.py:33
+msgid "label_related_communicators"
+msgstr ""
+
+#. Default: "MF Moderators"
+#: ../content/mf_activity.py:55
+msgid "label_related_moderators"
+msgstr ""
+
+#. Default: "MF Organizers"
+#: ../content/mf_activity.py:66
+msgid "label_related_organizers"
+msgstr ""
+
+#. Default: "MF Speakers"
+#: ../content/mf_activity.py:23
+msgid "label_related_speakers"
+msgstr ""
