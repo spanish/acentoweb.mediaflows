@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-09-05 21:29+0000\n"
+"POT-Creation-Date: 2021-09-11 14:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "MF Activity"
 msgstr ""
 
-#: ../views/mf_activity_view.pt:75
+#: ../views/mf_activity_view.pt:25
 msgid "MF Assistants"
 msgstr ""
 
@@ -55,11 +55,11 @@ msgstr ""
 msgid "MF Day"
 msgstr ""
 
-#: ../views/mf_activity_view.pt:100
+#: ../views/mf_activity_view.pt:75
 msgid "MF Moderators"
 msgstr ""
 
-#: ../views/mf_activity_view.pt:126
+#: ../views/mf_activity_view.pt:101
 msgid "MF Organizers"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "MF Publication"
 msgstr ""
 
-#: ../views/mf_activity_view.pt:25
+#: ../views/mf_activity_view.pt:126
 msgid "MF Speakers"
 msgstr ""
 
@@ -101,6 +101,10 @@ msgstr ""
 
 #: ../profiles/default/types/MF_Publication.xml
 msgid "Mediaflows Publication"
+msgstr ""
+
+#: ../views/mf_person_view.pt:53
+msgid "Publications"
 msgstr ""
 
 #: ../configure.zcml:37
