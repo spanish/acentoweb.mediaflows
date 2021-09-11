@@ -7,20 +7,59 @@
   -*- extra stuff goes here -*-
 
   <browser:page
-    name="activity-view"
+    name="mf-activity-view"
     for="plone.dexterity.interfaces.IDexterityItem"
-    class=".activity_view.ActivityView"
-    template="activity_view.pt"
+    class=".mf_activity_view.MFActivityView"
+    template="mf_activity_view.pt"
     permission="zope2.View"
     />
 
   <browser:page
-    name="person-view"
-    for="plone.dexterity.interfaces.IDexterityItem"
-    class=".person_view.PersonView"
-    template="person_view.pt"
+    name="mf-congress-view"
+    for="plone.dexterity.interfaces.IDexterityContainer"
+    class=".mf_congress_view.MFCongressView"
+    template="mf_congress_view.pt"
+    permission="zope2.View"
+    />
+    
+  <browser:page
+    name="mf-day-view"
+    for="plone.dexterity.interfaces.IDexterityContainer"
+    class=".mf_day_view.MFDayView"
+    template="mf_day_view.pt"
     permission="zope2.View"
     />
 
+  <browser:page
+    name="mf-person-view"
+    for="plone.dexterity.interfaces.IDexterityItem"
+    class=".mf_person_view.MFPersonView"
+    template="mf_person_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="mf-program-view"
+    for="plone.dexterity.interfaces.IDexterityContainer"
+    class=".mf_program_view.MFProgramView"
+    template="mf_program_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="mf-publication-view"
+    for="plone.dexterity.interfaces.IDexterityItem"
+    class=".mf_publication_view.MFPublicationView"
+    template="mf_publication_view.pt"
+    permission="zope2.View"
+    />
 
 </configure>
+
+
+
+
+
+
+
+
