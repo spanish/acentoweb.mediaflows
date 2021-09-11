@@ -12,12 +12,12 @@ def format_title(folder):
 
 
 
-def PersonVocabulary(context):
+def PersonsVocabulary(context):
 
-    persons = api.content.find(portal_type=['Person', 'person'], sort_on='sortable_title')
+    mf_persons = api.content.find(portal_type=['MF Person', 'mf_person'], sort_on='sortable_title')
 
-    if persons:
-        terms = [ SimpleTerm(value=person.UID, token=person.UID, title=person.Title) for person in persons ]
+    if mf_persons:
+        terms = [ SimpleTerm(value=mf_person.UID, token=mf_person.UID, title=mf_person.Title) for mf_person in mf_persons ]
     return SimpleVocabulary(terms)
 
-directlyProvides(PersonVocabulary, IVocabularyFactory)
+directlyProvides(PersonsVocabulary, IVocabularyFactory)

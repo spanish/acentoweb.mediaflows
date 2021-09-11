@@ -11,6 +11,7 @@
     Be careful if you use general includeDependencies, it can have side effects!
     Better import explicit packages or configurations ;)
   -->
+
   <!--<includeDependencies package="." />-->
 
   <include package=".browser" />
@@ -40,14 +41,15 @@
       name="acentoweb.mediaflows-hiddenprofiles"
       />
 
-
+  <!-- -*- extra stuff goes here -*- -->
 
   <include package=".views" />
+
   <include package=".widgets" />
 
   <!-- vocabulary is neccesary for multilingual sites -->
   <utility
-    component=".vocabulary.PersonVocabulary"
-    name="acentoweb.mediaflows.PersonVocabulary" />
+    component=".vocabulary.PersonsVocabulary"
+    name="acentoweb.mediaflows.PersonsVocabulary" />
 
 </configure>

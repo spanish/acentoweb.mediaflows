@@ -7,17 +7,34 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
-        id="acentoweb.mediaflows.AddActivity"
-        title="acentoweb.mediaflows: Add Activity"
+        id="acentoweb.mediaflows.AddMFActivity"
+        title="acentoweb.mediaflows: Add MF Activity"
     />
-
 
     <permission
-        id="acentoweb.mediaflows.AddPerson"
-        title="acentoweb.mediaflows: Add Person"
+        id="acentoweb.mediaflows.AddMFCongress"
+        title="acentoweb.mediaflows: Add MF Congress"
     />
 
+    <permission
+        id="acentoweb.mediaflows.AddMFDay"
+        title="acentoweb.mediaflows: Add MF Day"
+    />
 
+    <permission
+        id="acentoweb.mediaflows.AddMFPerson"
+        title="acentoweb.mediaflows: Add MF Person"
+    />
+
+    <permission
+        id="acentoweb.mediaflows.AddMFProgram"
+        title="acentoweb.mediaflows: Add MF Program"
+    />
+
+    <permission
+        id="acentoweb.mediaflows.AddMFPublication"
+        title="acentoweb.mediaflows: Add MF Publication"
+    />
 
   </configure>
 
