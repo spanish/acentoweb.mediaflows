@@ -18,4 +18,9 @@
       directory="static"
       />
 
+  <browser:resource 
+      name="mediaflows.css" 
+      file="mediaflows.css" 
+      />
+
 </configure>
