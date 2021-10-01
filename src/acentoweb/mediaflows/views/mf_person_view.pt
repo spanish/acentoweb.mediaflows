@@ -20,8 +20,12 @@
       </figure>
 -->
       <div tal:content="context/orcid|None" />
-      <div tal:content="context/mail|None" />
-      <div tal:content="context/web|None" />
+      <div tal:condition="context/mail">
+        Correo: <a href="mailto:${context/mail}">${context/mail}</a>
+      </div>
+      <div tal:condition="context/web|None">
+        Web: <a href="${context/web}">${context/web}</a>
+      </div>
       <div tal:content="context/institution|None" />
       <div tal:content="context/specialties|None" />
       <div tal:content="context/work|None" />

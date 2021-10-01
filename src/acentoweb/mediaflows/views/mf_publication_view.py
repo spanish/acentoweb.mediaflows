@@ -27,6 +27,7 @@ class MFPublicationView(BrowserView):
 
     #Both relations'ways' are kept, in case you want to refer 'the other way around later'
     #see mf_person_view.py
+    #Note, if you only want back references of a certain content type: please look at code in mf_person.py
 
     def get_relatedauthors(self):
         """Returns authors"""
