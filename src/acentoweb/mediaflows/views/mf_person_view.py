@@ -75,9 +75,10 @@ class MFPersonView(BrowserView):
         rel_items = list(catalog.findRelations(rel_query))
         return rel_items
 
-    def back_references(self, context = None):
+
+    def back_publications(self, context = None ):
         """
-        Return back references
+        Return referenced pubications
         """
         catalog = getUtility(ICatalog)
         intids = getUtility(IIntIds)
@@ -87,5 +88,23 @@ class MFPersonView(BrowserView):
         for rel in list(catalog.findRelations(rel_query)):
             obj = intids.queryObject(rel.from_id)
             if obj is not None and checkPermission('zope2.View', obj):
-                result.append(obj)
+                if obj.portal_type == 'MF Activity'  :
+                    result.append(obj)
+        return result
+
+
+    def back_activities(self, context = None ):
+        """
+        Return referenced activities
+        """
+        catalog = getUtility(ICatalog)
+        intids = getUtility(IIntIds)
+        result= []
+        context = context and context or self.context
+        rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
+        for rel in list(catalog.findRelations(rel_query)):
+            obj = intids.queryObject(rel.from_id)
+            if obj is not None and checkPermission('zope2.View', obj):
+                if obj.portal_type == 'MF Publication' :
+                    result.append(obj)
         return result

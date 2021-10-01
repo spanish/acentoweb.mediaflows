@@ -18,7 +18,7 @@
                    tal:content="context/image_caption">
                </figcaption>
       </figure>
--->  
+-->
       <div tal:content="context/orcid|None" />
       <div tal:content="context/mail|None" />
       <div tal:content="context/web|None" />
@@ -29,10 +29,10 @@
       <div tal:define="research_sc context/research_sc;research_sc_yes python:research_sc != 'No'" tal:condition="research_sc_yes" tal:content="context/research_sc" />
       <div tal:replace="structure context/text/output|None" />
 
-      <tal:check tal:condition="view/back_references|None">
-        <h2 i18n:translate="">Activities</h2>
-         <ul tal:repeat="ref view/back_references">
-           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" tal:condition="python:portal_type == 'MF Activity'">
+      <tal:check tal:condition="view/back_publications|None">
+         <h2 i18n:translate="">Activities</h2>
+         <ul tal:repeat="ref view/back_publications">
+           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type">
                <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                            tal:on-error="">
                  <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
@@ -49,10 +49,11 @@
          </ul>
       </tal:check>
 
-      <tal:check tal:condition="view/back_references|None">
+
+      <tal:check tal:condition="view/back_activities|None">
         <h2 i18n:translate="">Publications</h2>
-         <ul tal:repeat="ref view/back_references">
-           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" tal:condition="python:portal_type == 'MF Publication'">
+         <ul tal:repeat="ref view/back_activities">
+           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" >
                <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                            tal:on-error="">
                  <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
