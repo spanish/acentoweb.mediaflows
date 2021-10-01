@@ -20,31 +20,33 @@ class IMFPerson(model.Schema):
         required=False,
         missing_value=u'',
     )
-    
+
+    #consider using  type="plone.schema.email.Email">
     mail = schema.TextLine(
         title=u'Mail',
         required=False,
         missing_value=u'',
     )
-    
+
+    #consider using  type="zope.schema.URI"
     web = schema.TextLine(
         title=u'Web',
         required=False,
         missing_value=u'',
     )
-    
+
     institution = schema.TextLine(
         title=u'Institution',
         required=False,
         missing_value=u'',
     )
-    
+
     specialties = schema.TextLine(
         title=u'Specialties',
         required=False,
         missing_value=u'',
     )
-    
+
     work = schema.TextLine(
         title=u'Work',
         required=False,
