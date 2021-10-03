@@ -8,9 +8,6 @@ class IMFCongress(model.Schema):
     """ Marker interface for MF Congress
     """
 
-    #Consider using
-    #zope.schema.Date"
-    #or type="zope.schema.Datetime"
     date = schema.TextLine(
         title=u'Date',
         description=u'Congress Date',
