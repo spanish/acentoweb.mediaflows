@@ -75,10 +75,9 @@ class MFPersonView(BrowserView):
         rel_items = list(catalog.findRelations(rel_query))
         return rel_items
 
-
-    def back_publications(self, context = None ):
+    def back_activities(self, context = None ):
         """
-        Return referenced pubications
+        Return referenced activities
         """
         catalog = getUtility(ICatalog)
         intids = getUtility(IIntIds)
@@ -92,10 +91,9 @@ class MFPersonView(BrowserView):
                     result.append(obj)
         return result
 
-
-    def back_activities(self, context = None ):
+    def back_publications(self, context = None ):
         """
-        Return referenced activities
+        Return referenced publications
         """
         catalog = getUtility(ICatalog)
         intids = getUtility(IIntIds)
