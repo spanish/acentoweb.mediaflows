@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 from plone.app.textfield import RichText
-# from plone.autoform import directives
 from plone.dexterity.content import Item
-# from plone.namedfile import field as namedfile
+from plone.schema.email import Email
 from plone.supermodel import model
-# from plone.supermodel.directives import fieldset
-# from z3c.form.browser.radio import RadioFieldWidget
 from zope import schema
 from zope.interface import implementer
 
@@ -15,21 +12,19 @@ class IMFPerson(model.Schema):
     """ Marker interface and Dexterity Python Schema for MF Person
     """
 
-    orcid = schema.TextLine(
+    orcid = schema.URI(
         title=u'ORCID',
         required=False,
         missing_value=u'',
     )
 
-    #consider using  type="plone.schema.email.Email">
-    mail = schema.TextLine(
+    mail = Email(
         title=u'Mail',
         required=False,
         missing_value=u'',
     )
 
-    #consider using  type="zope.schema.URI"
-    web = schema.TextLine(
+    web = schema.URI(
         title=u'Web',
         required=False,
         missing_value=u'',
