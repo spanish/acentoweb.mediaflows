@@ -31,6 +31,14 @@
     />
 
   <browser:page
+    name="mf-news-view"
+    for="plone.dexterity.interfaces.IDexterityItem"
+    class=".mf_news_view.MFNewsView"
+    template="mf_news_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
     name="mf-person-view"
     for="plone.dexterity.interfaces.IDexterityItem"
     class=".mf_person_view.MFPersonView"
