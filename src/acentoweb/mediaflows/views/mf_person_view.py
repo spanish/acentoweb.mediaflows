@@ -75,6 +75,17 @@ class MFPersonView(BrowserView):
         rel_items = list(catalog.findRelations(rel_query))
         return rel_items
 
+    def get_relatedpersons(self, context = None):
+
+        """ Return a list of backreference relationvalues
+        """
+        catalog = getUtility(ICatalog)
+        intids = getUtility(IIntIds)
+        context = context and context or self.context
+        rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
+        rel_items = list(catalog.findRelations(rel_query))
+        return rel_items
+
     def get_relatedspeakers(self, context = None):
 
         """ Return a list of backreference relationvalues
@@ -99,6 +110,22 @@ class MFPersonView(BrowserView):
             obj = intids.queryObject(rel.from_id)
             if obj is not None and checkPermission('zope2.View', obj):
                 if obj.portal_type == 'MF Activity'  :
+                    result.append(obj)
+        return result
+
+    def back_news(self, context = None ):
+        """
+        Return referenced news
+        """
+        catalog = getUtility(ICatalog)
+        intids = getUtility(IIntIds)
+        result= []
+        context = context and context or self.context
+        rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
+        for rel in list(catalog.findRelations(rel_query)):
+            obj = intids.queryObject(rel.from_id)
+            if obj is not None and checkPermission('zope2.View', obj):
+                if obj.portal_type == 'MF News' :
                     result.append(obj)
         return result
 
