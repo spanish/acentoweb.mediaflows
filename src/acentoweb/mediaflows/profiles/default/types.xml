@@ -5,6 +5,7 @@
   <object meta_type="Dexterity FTI" name="MF Activity"/>
   <object meta_type="Dexterity FTI" name="MF Congress"/>
   <object meta_type="Dexterity FTI" name="MF Day"/>
+  <object meta_type="Dexterity FTI" name="MF News"/>
   <object meta_type="Dexterity FTI" name="MF Person"/>
   <object meta_type="Dexterity FTI" name="MF Program"/>
   <object meta_type="Dexterity FTI" name="MF Publication"/>
