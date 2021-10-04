@@ -33,7 +33,7 @@ Tell me what your product does
 Features
 --------
 
-- Add Activity and Person content types to Plone with (related) views and other content types (Congress, Program and Day).
+- Add Person, Activity, Publication and News content types to Plone with (related) views and other content types (Congress, Program and Day).
 
 
 
@@ -55,7 +55,7 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- Spanish
 
 
 Installation
