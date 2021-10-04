@@ -19,6 +19,14 @@ class IMFNews(model.Schema):
     """ Marker interface for MF News
     """
 
+    categories = schema.List(
+        title=u'Categories',
+        value_type=schema.Choice(
+            values=[u'Congresos', u'Libros', u'Mediaflows', u'Tesis'],
+            ),
+        required=True,
+        )
+
     relatedPersons = RelationList(
         title=_(u'label_related_persons', default=u'MF Persons'),
         default=[],
