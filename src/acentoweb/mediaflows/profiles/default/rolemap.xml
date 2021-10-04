@@ -25,6 +25,13 @@
       <role name="Contributor"/>
     </permission>
 
+    <permission name="acentoweb.mediaflows: Add MF News" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
     <permission name="acentoweb.mediaflows: Add MF Person" acquire="True">
       <role name="Manager"/>
       <role name="Site Administrator"/>
