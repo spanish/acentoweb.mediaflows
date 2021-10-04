@@ -20,7 +20,18 @@ class MFPersonView(BrowserView):
     def __call__(self):
         return self.index()
 
-    def get_relatedspeakers(self, context = None):
+    def get_relatedassistants(self, context = None):
+
+        """ Return a list of backreference relationvalues
+        """
+        catalog = getUtility(ICatalog)
+        intids = getUtility(IIntIds)
+        context = context and context or self.context
+        rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
+        rel_items = list(catalog.findRelations(rel_query))
+        return rel_items
+
+    def get_relatedauthors(self, context = None):
 
         """ Return a list of backreference relationvalues
         """
@@ -32,17 +43,6 @@ class MFPersonView(BrowserView):
         return rel_items
 
     def get_relatedcommunicators(self, context = None):
-
-        """ Return a list of backreference relationvalues
-        """
-        catalog = getUtility(ICatalog)
-        intids = getUtility(IIntIds)
-        context = context and context or self.context
-        rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
-        rel_items = list(catalog.findRelations(rel_query))
-        return rel_items
-
-    def get_relatedassistants(self, context = None):
 
         """ Return a list of backreference relationvalues
         """
@@ -65,6 +65,17 @@ class MFPersonView(BrowserView):
         return rel_items
 
     def get_relatedorganizers(self, context = None):
+
+        """ Return a list of backreference relationvalues
+        """
+        catalog = getUtility(ICatalog)
+        intids = getUtility(IIntIds)
+        context = context and context or self.context
+        rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
+        rel_items = list(catalog.findRelations(rel_query))
+        return rel_items
+
+    def get_relatedspeakers(self, context = None):
 
         """ Return a list of backreference relationvalues
         """
