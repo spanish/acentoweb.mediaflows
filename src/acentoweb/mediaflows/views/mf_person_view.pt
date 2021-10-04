@@ -53,10 +53,29 @@
          </ul>
       </tal:check>
 
-
       <tal:check tal:condition="view/back_publications|None">
         <h2 i18n:translate="">Publications</h2>
          <ul tal:repeat="ref view/back_publications">
+           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" >
+               <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
+                           tal:on-error="">
+                 <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
+                   <img  class="image-popup"
+                         tal:replace="structure python:scaled_image.tag()"
+                         tal:on-error=""
+                         tal:condition="scaled_image"/>
+                   <div>
+                     <h4>${ref/Title|None}</h4>
+                   </div>
+                 </a>
+               </tal:define>
+             </li>
+         </ul>
+      </tal:check>
+
+      <tal:check tal:condition="view/back_news|None">
+        <h2 i18n:translate="">News</h2>
+         <ul tal:repeat="ref view/back_news">
            <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" >
                <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                            tal:on-error="">
