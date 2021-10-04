@@ -22,7 +22,7 @@ class IMFNews(model.Schema):
     categories = schema.List(
         title=u'Categories',
         value_type=schema.Choice(
-            values=[u'Congresos', u'Libros', u'Mediaflows', u'Tesis'],
+            values=[u'Congresses', u'Books', u'Mediaflows', u'Theses'],
             ),
         required=True,
         )
