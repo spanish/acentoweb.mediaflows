@@ -22,6 +22,11 @@
     />
 
     <permission
+        id="acentoweb.mediaflows.AddMFNews"
+        title="acentoweb.mediaflows: Add MF News"
+    />
+
+    <permission
         id="acentoweb.mediaflows.AddMFPerson"
         title="acentoweb.mediaflows: Add MF Person"
     />
