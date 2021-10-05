@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-09-11 14:10+0000\n"
+"POT-Creation-Date: 2021-10-05 01:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,8 +14,12 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../views/mf_person_view.pt:33
+#: ../views/mf_person_view.pt:37
 msgid "Activities"
+msgstr ""
+
+#: ../views/mf_news_view.pt:25
+msgid "Categories"
 msgstr ""
 
 #: ../profiles/default/types/MF_Activity.xml
@@ -56,12 +60,20 @@ msgstr ""
 msgid "MF Moderators"
 msgstr ""
 
+#: ../profiles/default/types/MF_News.xml
+msgid "MF News"
+msgstr ""
+
 #: ../views/mf_activity_view.pt:101
 msgid "MF Organizers"
 msgstr ""
 
 #: ../profiles/default/types/MF_Person.xml
 msgid "MF Person"
+msgstr ""
+
+#: ../views/mf_news_view.pt:37
+msgid "MF Persons"
 msgstr ""
 
 #: ../profiles/default/types/MF_Program.xml
@@ -88,6 +100,10 @@ msgstr ""
 msgid "Mediaflows Day"
 msgstr ""
 
+#: ../profiles/default/types/MF_News.xml
+msgid "Mediaflows News"
+msgstr ""
+
 #: ../profiles/default/types/MF_Person.xml
 msgid "Mediaflows Person"
 msgstr ""
@@ -100,7 +116,11 @@ msgstr ""
 msgid "Mediaflows Publication"
 msgstr ""
 
-#: ../views/mf_person_view.pt:53
+#: ../views/mf_person_view.pt:77
+msgid "News"
+msgstr ""
+
+#: ../views/mf_person_view.pt:57
 msgid "Publications"
 msgstr ""
 
@@ -145,6 +165,11 @@ msgstr ""
 #. Default: "MF Organizers"
 #: ../content/mf_activity.py:66
 msgid "label_related_organizers"
+msgstr ""
+
+#. Default: "MF Persons"
+#: ../content/mf_news.py:31
+msgid "label_related_persons"
 msgstr ""
 
 #. Default: "MF Speakers"
