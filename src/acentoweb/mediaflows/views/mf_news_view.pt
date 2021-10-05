@@ -19,7 +19,14 @@
              </figcaption>
       </figure>
 -->
+
       <div tal:replace="structure context/text/output|None" />
+      
+      <h2 i18n:translate="">Categories</h2>
+
+      <h3 tal:define="categories context/categories"
+          tal:repeat="category categories"
+          tal:content="category" />
 
       <tal:check tal:condition="view/get_relatedpersons|None">
         <h2 i18n:translate="">MF Persons</h2>
@@ -35,7 +42,7 @@
                             tal:on-error=""
                             tal:condition="scaled_image"/>
                       <div>
-                          <h4>${ref_obj/Title|None}</h4>
+                          <h3>${ref_obj/Title|None}</h3>
                           <p class="Description">${ref_obj/Description|None}</p>
                       </div>
                     </a>
