@@ -29,8 +29,8 @@
       <div tal:content="context/institution|None" />
       <div tal:content="context/specialties|None" />
       <div tal:content="context/work|None" />
-      <div tal:define="research_role context/research_role;research_role_yes python:research_role != 'None'" tal:condition="research_role_yes" tal:content="context/research_role" />
-      <div tal:define="research_sc context/research_sc;research_sc_yes python:research_sc != 'No'" tal:condition="research_sc_yes" tal:content="context/research_sc" />
+      <div tal:define="research_role context/research_role;research_role_yes python:research_role != 'None'" tal:condition="research_role_yes" tal:content="research_role" />
+      <div tal:define="research_sc context/research_sc;research_sc_yes python:research_sc != 'No'" tal:condition="research_sc_yes" tal:content="research_sc" />
       <div tal:replace="structure context/text/output|None" />
 
       <tal:check tal:condition="view/back_activities|None">
