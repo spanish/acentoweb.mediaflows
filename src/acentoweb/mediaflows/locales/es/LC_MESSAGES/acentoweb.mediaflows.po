@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0a2\n"
-"POT-Creation-Date: 2021-09-11 14:10+0000\n"
+"POT-Creation-Date: 2021-10-05 01:59+0000\n"
 "PO-Revision-Date: 2021-08-28 12:34+0000\n"
 "Last-Translator: Acento Web <correo@acentoweb.com>\n"
 "Language-Team: Spanish <correo@acentoweb.com>\n"
@@ -14,9 +14,13 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../views/mf_person_view.pt:33
+#: ../views/mf_person_view.pt:37
 msgid "Activities"
 msgstr "Actividades"
+
+#: ../views/mf_news_view.pt:25
+msgid "Categories"
+msgstr "Categorías"
 
 #: ../profiles/default/types/MF_Activity.xml
 #: ../profiles/default/types/MF_Congress.xml
@@ -56,6 +60,10 @@ msgstr "MF Día"
 msgid "MF Moderators"
 msgstr "MF Moderadores/as"
 
+#: ../profiles/default/types/MF_News.xml
+msgid "MF News"
+msgstr "MF Noticia"
+
 #: ../views/mf_activity_view.pt:101
 msgid "MF Organizers"
 msgstr "MF Organizadores/as"
@@ -63,6 +71,10 @@ msgstr "MF Organizadores/as"
 #: ../profiles/default/types/MF_Person.xml
 msgid "MF Person"
 msgstr "MF Persona"
+
+#: ../views/mf_news_view.pt:37
+msgid "MF Persons"
+msgstr "MF Personas"
 
 #: ../profiles/default/types/MF_Program.xml
 msgid "MF Program"
@@ -88,6 +100,10 @@ msgstr "Congreso Mediaflows"
 msgid "Mediaflows Day"
 msgstr "Día Mediaflows"
 
+#: ../profiles/default/types/MF_News.xml
+msgid "Mediaflows News"
+msgstr "Noticia Mediaflows"
+
 #: ../profiles/default/types/MF_Person.xml
 msgid "Mediaflows Person"
 msgstr "Persona Mediaflows"
@@ -100,7 +116,11 @@ msgstr "Programa Mediaflows"
 msgid "Mediaflows Publication"
 msgstr "Publicación Mediaflows"
 
-#: ../views/mf_person_view.pt:53
+#: ../views/mf_person_view.pt:77
+msgid "News"
+msgstr "Noticias"
+
+#: ../views/mf_person_view.pt:57
 msgid "Publications"
 msgstr "Publicaciones"
 
@@ -146,6 +166,11 @@ msgstr "MF Moderadores/as"
 #: ../content/mf_activity.py:66
 msgid "label_related_organizers"
 msgstr "MF Organizadores/as"
+
+#. Default: "MF Persons"
+#: ../content/mf_news.py:31
+msgid "label_related_persons"
+msgstr "MF Personas"
 
 #. Default: "MF Speakers"
 #: ../content/mf_activity.py:23
