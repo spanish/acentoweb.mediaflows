@@ -14,24 +14,25 @@ from acentoweb.mediaflows.vocabulary import PersonsVocabulary
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('acentoweb.mediaflows')
 
-
 class IMFNews(model.Schema):
     """ Marker interface for MF News
     """
 
-    categories = schema.List(
-        title=u'Categories',
+    news_categories = schema.Set (
+        title=_(u'label_news_categories', default=u'Categories'),
+        description=_(u'label_news_categories_description', default=u'News categories'),
         value_type=schema.Choice(
-            values=[u'Congresses', u'Books', u'Mediaflows', u'Theses'],
-            ),
-        required=True,
+            title = _("label_news_categories", default=u"Categories"),
+            vocabulary = 'collective.taxonomy.mf_news_categories',
+            required = True
         )
+    )
 
     relatedPersons = RelationList(
-        title=_(u'label_related_persons', default=u'MF Persons'),
+        title=_(u'label_news_related_persons', default=u'Persons'),
         default=[],
         value_type=RelationChoice(
-            title=u'MF Persons',
+            title=u'Persons',
             vocabulary='plone.app.vocabularies.Catalog',
         ),
         required=False,

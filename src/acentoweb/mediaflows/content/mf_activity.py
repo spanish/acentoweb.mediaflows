@@ -14,26 +14,76 @@ from acentoweb.mediaflows.vocabulary import PersonsVocabulary
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('acentoweb.mediaflows')
 
-
 class IMFActivity(model.Schema):
     """ Marker interface for MF Activity
     """
 
+    activity_types = schema.Set (
+        title=_(u'label_activity_types', default=u'Types'),
+        description=_(u'label_activity_types_description', default=u'Activity types'),
+        value_type=schema.Choice(
+            title = _("label_activity_types", default=u"Types"),
+            vocabulary = 'collective.taxonomy.mf_activity_types',
+            required = True
+        )
+    )
+
+    activity_categories = schema.Set (
+        title=_(u'label_activity_categories', default=u'Categories'),
+        description=_(u'label_activity_categories_description', default=u'Activity categories'),
+        value_type=schema.Choice(
+            title = _("label_activity_categories", default=u"Categories"),
+            vocabulary = 'collective.taxonomy.mf_activity_categories',
+            required = True
+        )
+    )
+
+    start = schema.Datetime(
+        title=_(u'label_activity_start', default=u'Start'),
+        description=_(u'label_activity_start_description', default=u'Activity datetime start'),
+        required=True
+    )
+
+    day = schema.Date(
+        title=_(u'label_activity_day', default=u'Day'),
+        description=_(u'label_activity_day_description', default=u'Activity day'),
+        required=True,
+    )
+
+    time = schema.Time(
+        title=_(u'label_activity_time', default=u'Time'),
+        description=_(u'label_activity_time_description', default=u'Activity start time'),
+        required=True,
+        )
+
+    location = schema.TextLine(
+        title=_(u'label_activity_location', default=u'Location'),
+        description=_(u'label_activity_location_description', default=u'Activity location'),
+        required=True,
+    )
+
+    video = schema.URI(
+        title=_(u'label_activity_orcid', default=u'Video'),
+        description=_(u'label_activity_orcid_description', default=u'Video URL'),
+        required=False,
+        missing_value=u'',
+    )
+
     relatedSpeakers = RelationList(
-        title=_(u'label_related_speakers', default=u'MF Speakers'),
+        title=_(u'label_activity_related_speakers', default=u'Speakers'),
         default=[],
         value_type=RelationChoice(
-            title=u'MF Speakers',
+            title=u'Speakers',
             vocabulary='plone.app.vocabularies.Catalog',
         ),
         required=False,
     )
 
     relatedCommunicators = RelationList(
-        title=_(u'label_related_communicators', default=u'MF Communicators'),
+        title=_(u'label_activity_related_communicators', default=u'Communicators'),
         default=[],
         value_type=RelationChoice(
-            title=u'MF Communicators',
+            title=u'Communicators',
             vocabulary='plone.app.vocabularies.Catalog',
         ),
         required=False,
@@ -41,10 +91,10 @@ class IMFActivity(model.Schema):
 
 
     relatedAssistants = RelationList(
-        title=_(u'label_related_assistants', default=u'MF Assistants'),
+        title=_(u'label_activity_related_assistants', default=u'Assistants'),
         default=[],
         value_type=RelationChoice(
-            title=u'MF Assistants',
+            title=u'Assistants',
             vocabulary='plone.app.vocabularies.Catalog',
         ),
         required=False,
@@ -52,10 +102,10 @@ class IMFActivity(model.Schema):
 
 
     relatedModerators = RelationList(
-        title=_(u'label_related_moderators', default=u'MF Moderators'),
+        title=_(u'label_activity_related_moderators', default=u'Moderators'),
         default=[],
         value_type=RelationChoice(
-            title=u'MF Moderators',
+            title=u'Moderators',
             vocabulary='plone.app.vocabularies.Catalog',
         ),
         required=False,
@@ -63,10 +113,10 @@ class IMFActivity(model.Schema):
 
 
     relatedOrganizers = RelationList(
-        title=_(u'label_related_organizers', default=u'MF Organizers'),
+        title=_(u'label_activity_related_organizers', default=u'Organizers'),
         default=[],
         value_type=RelationChoice(
-            title=u'MF Organizers',
+            title=u'Organizers',
             vocabulary='plone.app.vocabularies.Catalog',
         ),
         required=False,
