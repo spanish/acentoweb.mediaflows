@@ -53,7 +53,9 @@ setup(
         'plone.restapi',
         'plone.app.dexterity',
         'plone.app.relationfield',
+        'plone.app.vocabularies',
         'collective.easyform>=3.0.5',
+        'collective.taxonomy>=2.1.0'
     ],
     extras_require={
         'test': [
