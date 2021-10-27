@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-10-05 01:59+0000\n"
+"POT-Creation-Date: 2021-10-27 22:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,54 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: acentoweb.mediaflows\n"
 
-#: ../views/mf_person_view.pt:37
+#: ../views/mf_activity_view.pt:51
+#: ../views/mf_news_view.pt:29
+msgid "<h3>x</h3>"
+msgstr ""
+
+#: ../views/mf_person_view.pt:75
 msgid "Activities"
 msgstr ""
 
+#: ../profiles/default/registry.xml
+msgid "Activity categories"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Activity types"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:74
+msgid "Assistants"
+msgstr ""
+
+#: ../views/mf_publication_view.pt:25
+msgid "Authors"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:55
 #: ../views/mf_news_view.pt:25
 msgid "Categories"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Categories of the activities"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Categories of the news"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:99
+msgid "Communicators"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:36
+msgid "Day"
+msgstr ""
+
+#: ../views/mf_program_view.pt:24
+msgid "Download Program PDF"
 msgstr ""
 
 #: ../profiles/default/types/MF_Activity.xml
@@ -35,20 +77,16 @@ msgstr ""
 msgid "Installs the acentoweb.mediaflows add-on."
 msgstr ""
 
+#: ../views/mf_person_view.pt:35
+msgid "Institution"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:44
+msgid "Location"
+msgstr ""
+
 #: ../profiles/default/types/MF_Activity.xml
 msgid "MF Activity"
-msgstr ""
-
-#: ../views/mf_activity_view.pt:25
-msgid "MF Assistants"
-msgstr ""
-
-#: ../views/mf_publication_view.pt:25
-msgid "MF Authors"
-msgstr ""
-
-#: ../views/mf_activity_view.pt:50
-msgid "MF Communicators"
 msgstr ""
 
 #: ../profiles/default/types/MF_Congress.xml
@@ -59,24 +97,12 @@ msgstr ""
 msgid "MF Day"
 msgstr ""
 
-#: ../views/mf_activity_view.pt:75
-msgid "MF Moderators"
-msgstr ""
-
 #: ../profiles/default/types/MF_News.xml
 msgid "MF News"
 msgstr ""
 
-#: ../views/mf_activity_view.pt:101
-msgid "MF Organizers"
-msgstr ""
-
 #: ../profiles/default/types/MF_Person.xml
 msgid "MF Person"
-msgstr ""
-
-#: ../views/mf_news_view.pt:37
-msgid "MF Persons"
 msgstr ""
 
 #: ../profiles/default/types/MF_Program.xml
@@ -87,8 +113,8 @@ msgstr ""
 msgid "MF Publication"
 msgstr ""
 
-#: ../views/mf_activity_view.pt:126
-msgid "MF Speakers"
+#: ../views/mf_person_view.pt:28
+msgid "Mail"
 msgstr ""
 
 #: ../profiles/default/types/MF_Activity.xml
@@ -119,22 +145,111 @@ msgstr ""
 msgid "Mediaflows Publication"
 msgstr ""
 
-#: ../views/mf_person_view.pt:77
+#: ../profiles/default/registry.xml
+msgid "Metadata"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:124
+msgid "Moderators"
+msgstr ""
+
+#: ../views/mf_person_view.pt:95
 msgid "News"
 msgstr ""
 
-#: ../views/mf_person_view.pt:57
+#: ../profiles/default/registry.xml
+msgid "News categories"
+msgstr ""
+
+#: ../views/mf_person_view.pt:24
+msgid "ORCID"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:150
+msgid "Organizers"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Person Research Role"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Person Research SC"
+msgstr ""
+
+#: ../views/mf_news_view.pt:34
+msgid "Persons"
+msgstr ""
+
+#: ../views/mf_person_view.pt:62
 msgid "Publications"
+msgstr ""
+
+#: ../views/mf_person_view.pt:52
+msgid "Research Subgroup Coordinator"
+msgstr ""
+
+#: ../views/mf_person_view.pt:47
+msgid "Research role"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Research role of the persons"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:175
+msgid "Speakers"
+msgstr ""
+
+#: ../views/mf_person_view.pt:39
+msgid "Specialties"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:32
+msgid "Start"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:63
+#: ../views/mf_person_view.pt:57
+msgid "Text"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "This person is a Research Subgroup Coordinator?"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:40
+msgid "Time"
+msgstr ""
+
+#: ../views/mf_activity_view.pt:47
+msgid "Types"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Types of activities"
 msgstr ""
 
 #: ../configure.zcml:37
 msgid "Uninstalls the acentoweb.mediaflows add-on."
 msgstr ""
 
+#: ../views/mf_activity_view.pt:67
+msgid "Video"
+msgstr ""
+
 #: ../profiles/default/types/MF_Activity.xml
 #: ../profiles/default/types/MF_Congress.xml
 #: ../profiles/default/types/MF_Day.xml
 msgid "View"
+msgstr ""
+
+#: ../views/mf_person_view.pt:31
+msgid "Web"
+msgstr ""
+
+#: ../views/mf_person_view.pt:43
+msgid "Work"
 msgstr ""
 
 #: ../configure.zcml:28
@@ -145,37 +260,227 @@ msgstr ""
 msgid "acentoweb.mediaflows (uninstall)"
 msgstr ""
 
-#. Default: "MF Assistants"
-#: ../content/mf_activity.py:44
-msgid "label_related_assistants"
+#. Default: "Categories"
+#: ../content/mf_activity.py:32
+msgid "label_activity_categories"
 msgstr ""
 
-#. Default: "MF Authors"
-#: ../content/mf_publication.py:23
-msgid "label_related_authors"
-msgstr ""
-
-#. Default: "MF Communicators"
+#. Default: "Activity categories"
 #: ../content/mf_activity.py:33
-msgid "label_related_communicators"
+msgid "label_activity_categories_description"
 msgstr ""
 
-#. Default: "MF Moderators"
-#: ../content/mf_activity.py:55
-msgid "label_related_moderators"
+#. Default: "Day"
+#: ../content/mf_activity.py:48
+msgid "label_activity_day"
 msgstr ""
 
-#. Default: "MF Organizers"
+#. Default: "Activity day"
+#: ../content/mf_activity.py:49
+msgid "label_activity_day_description"
+msgstr ""
+
+#. Default: "Location"
+#: ../content/mf_activity.py:60
+msgid "label_activity_location"
+msgstr ""
+
+#. Default: "Activity location"
+#: ../content/mf_activity.py:61
+msgid "label_activity_location_description"
+msgstr ""
+
+#. Default: "Video"
 #: ../content/mf_activity.py:66
-msgid "label_related_organizers"
+msgid "label_activity_orcid"
 msgstr ""
 
-#. Default: "MF Persons"
-#: ../content/mf_news.py:31
-msgid "label_related_persons"
+#. Default: "Video URL"
+#: ../content/mf_activity.py:67
+msgid "label_activity_orcid_description"
 msgstr ""
 
-#. Default: "MF Speakers"
+#. Default: "Assistants"
+#: ../content/mf_activity.py:94
+msgid "label_activity_related_assistants"
+msgstr ""
+
+#. Default: "Communicators"
+#: ../content/mf_activity.py:83
+msgid "label_activity_related_communicators"
+msgstr ""
+
+#. Default: "Moderators"
+#: ../content/mf_activity.py:105
+msgid "label_activity_related_moderators"
+msgstr ""
+
+#. Default: "Organizers"
+#: ../content/mf_activity.py:116
+msgid "label_activity_related_organizers"
+msgstr ""
+
+#. Default: "Speakers"
+#: ../content/mf_activity.py:73
+msgid "label_activity_related_speakers"
+msgstr ""
+
+#. Default: "Start"
+#: ../content/mf_activity.py:42
+msgid "label_activity_start"
+msgstr ""
+
+#. Default: "Activity datetime start"
+#: ../content/mf_activity.py:43
+msgid "label_activity_start_description"
+msgstr ""
+
+#. Default: "Time"
+#: ../content/mf_activity.py:54
+msgid "label_activity_time"
+msgstr ""
+
+#. Default: "Activity start time"
+#: ../content/mf_activity.py:55
+msgid "label_activity_time_description"
+msgstr ""
+
+#. Default: "Types"
+#: ../content/mf_activity.py:22
+msgid "label_activity_types"
+msgstr ""
+
+#. Default: "Activity types"
 #: ../content/mf_activity.py:23
-msgid "label_related_speakers"
+msgid "label_activity_types_description"
+msgstr ""
+
+#. Default: "Date"
+#: ../content/mf_congress.py:15
+msgid "label_congress_date"
+msgstr ""
+
+#. Default: "Congress date"
+#: ../content/mf_congress.py:16
+msgid "label_congress_date_description"
+msgstr ""
+
+#. Default: "Location"
+#: ../content/mf_congress.py:22
+msgid "label_congress_location"
+msgstr ""
+
+#. Default: "Congress location"
+#: ../content/mf_congress.py:23
+msgid "label_congress_location_description"
+msgstr ""
+
+#. Default: "Categories"
+#: ../content/mf_news.py:22
+msgid "label_news_categories"
+msgstr ""
+
+#. Default: "News categories"
+#: ../content/mf_news.py:23
+msgid "label_news_categories_description"
+msgstr ""
+
+#. Default: "Persons"
+#: ../content/mf_news.py:32
+msgid "label_news_related_persons"
+msgstr ""
+
+#. Default: "Institution"
+#: ../content/mf_person.py:40
+msgid "label_person_institution"
+msgstr ""
+
+#. Default: "Institution name"
+#: ../content/mf_person.py:41
+msgid "label_person_institution_description"
+msgstr ""
+
+#. Default: "Mail"
+#: ../content/mf_person.py:26
+msgid "label_person_mail"
+msgstr ""
+
+#. Default: "Mail address"
+#: ../content/mf_person.py:27
+msgid "label_person_mail_description"
+msgstr ""
+
+#. Default: "ORCID"
+#: ../content/mf_person.py:19
+msgid "label_person_orcid"
+msgstr ""
+
+#. Default: "ORCID URL"
+#: ../content/mf_person.py:20
+msgid "label_person_orcid_description"
+msgstr ""
+
+#. Default: "Research Role"
+#: ../content/mf_person.py:61
+msgid "label_person_research_role"
+msgstr ""
+
+#. Default: "Person research role"
+#: ../content/mf_person.py:62
+msgid "label_person_research_role_description"
+msgstr ""
+
+#. Default: "Research Subgroup Coordinator"
+#: ../content/mf_person.py:68
+msgid "label_person_research_sc"
+msgstr ""
+
+#. Default: "This person is a Research Subgroup Coordinator?"
+#: ../content/mf_person.py:69
+msgid "label_person_research_sc_description"
+msgstr ""
+
+#. Default: "Specialties"
+#: ../content/mf_person.py:47
+msgid "label_person_specialties"
+msgstr ""
+
+#. Default: "Person specialties"
+#: ../content/mf_person.py:48
+msgid "label_person_specialties_description"
+msgstr ""
+
+#. Default: "Web"
+#: ../content/mf_person.py:33
+msgid "label_person_web"
+msgstr ""
+
+#. Default: "Web URL"
+#: ../content/mf_person.py:34
+msgid "label_person_web_description"
+msgstr ""
+
+#. Default: "Work"
+#: ../content/mf_person.py:54
+msgid "label_person_work"
+msgstr ""
+
+#. Default: "Person work"
+#: ../content/mf_person.py:55
+msgid "label_person_work_description"
+msgstr ""
+
+#. Default: "PDF"
+#: ../content/mf_program.py:31
+msgid "label_program_pdf"
+msgstr ""
+
+#. Default: "PDF Program"
+#: ../content/mf_program.py:32
+msgid "label_program_pdf_description"
+msgstr ""
+
+#. Default: "Authors"
+#: ../content/mf_publication.py:23
+msgid "label_publication_related_authors"
 msgstr ""
