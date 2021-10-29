@@ -4,7 +4,6 @@ from zope.schema.interfaces import IVocabularyFactory
 from plone import api
 
 from zope.i18nmessageid import MessageFactory
-
 _ = MessageFactory('medialog.dutchestheme')
 
 def format_title(folder):
