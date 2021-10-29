@@ -14,7 +14,7 @@
     <tal:block tal:repeat="item context/@@contentlisting">
             <tal:block tal:define="url item/getURL; portal_type item/portal_type">
                 <a href="${url}" class="item-${item/portal_type}">
-                  <p tal:content="item/title" class="title">Item</p>
+                  <h2 tal:content="item/title" class="title" />
                 </a>
                 <p tal:content="item/description" class="description">Description</p>
              </tal:block>

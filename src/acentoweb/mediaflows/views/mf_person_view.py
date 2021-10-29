@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from acentoweb.mediaflows import _
-from Products.Five.browser import BrowserView
+#from Products.Five.browser import BrowserView
+from plone.dexterity.browser.view import DefaultView
 from zc.relation.interfaces import ICatalog
 from collections import OrderedDict
 
@@ -12,13 +13,13 @@ from zope.security import checkPermission
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
-class MFPersonView(BrowserView):
+class MFPersonView(DefaultView):
     # If you want to define a template here, please remove the template from
     # the configure.zcml registration of this view.
     # template = ViewPageTemplateFile('mf_person_view.pt')
 
-    def __call__(self):
-        return self.index()
+    #def __call__(self):
+    #    return self.index()
 
     def get_relatedassistants(self, context = None):
 

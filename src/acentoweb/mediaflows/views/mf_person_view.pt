@@ -19,24 +19,60 @@
                </figcaption>
       </figure>
 -->
-      <div tal:content="context/orcid|None" />
+
+      <div tal:condition="context/orcid|None">
+        <span i18n:translate="">ORCID</span>: <a href="${context/orcid}">${context/orcid}</a>
+      </div>
+
       <div tal:condition="context/mail">
-        Correo: <a href="mailto:${context/mail}">${context/mail}</a>
+        <span i18n:translate="">Mail</span>: <a href="mailto:${context/mail}">${context/mail}</a>
       </div>
       <div tal:condition="context/web|None">
-        Web: <a href="${context/web}">${context/web}</a>
+        <span i18n:translate="">Web</span>: <a href="${context/web}">${context/web}</a>
       </div>
-      <div tal:content="context/institution|None" />
-      <div tal:content="context/specialties|None" />
-      <div tal:content="context/work|None" />
-      <div tal:define="research_role context/research_role;research_role_yes python:research_role != 'None'" tal:condition="research_role_yes" tal:content="research_role" />
-      <div tal:define="research_sc context/research_sc;research_sc_yes python:research_sc != 'No'" tal:condition="research_sc_yes" tal:content="research_sc" />
-      <div tal:replace="structure context/text/output|None" />
+
+      <div tal:condition="context/institution|None">
+        <span i18n:translate="">Institution</span>: ${context/institution}
+      </div>
+
+      <div tal:condition="context/specialties|None">
+        <span i18n:translate="">Specialties</span>: ${context/specialties}
+      </div>
+
+      <div tal:condition="context/work|None">
+        <span i18n:translate="">Work</span>: ${context/work}
+      </div>
+
+      <div tal:condition="context/person_research_role">
+        <span i18n:translate="">Research role</span>: <span tal:replace="structure view/widgets/person_research_role/render" />
+      </div>
+
+      <div tal:condition="context/person_research_sc">
+        <span i18n:translate="">Research Subgroup Coordinator</span>: <span tal:replace="structure view/widgets/person_research_sc/render" />
+      </div>
+
+      <div tal:condition="context/text">
+        <h2 i18n:translate="">Text</h2>
+        <div tal:replace="structure context/text/output|None" />
+      </div>
+
+      <tal:check tal:condition="view/back_publications|None">
+         <h2 i18n:translate="">Publications</h2>
+         <tal:repeat tal:repeat="ref view/back_publications">
+          <tal:define tal:define="ref_obj nocall:ref">
+            <h3>
+              <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                ${ref_obj/Title|None}
+              </a>
+            </h3>
+          </tal:define>
+         </tal:repeat>
+      </tal:check>
 
       <tal:check tal:condition="view/back_activities|None">
          <h2 i18n:translate="">Activities</h2>
-         <ul tal:repeat="ref view/back_activities">
-           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type">
+         <tal:repeat tal:repeat="ref view/back_activities">
+           <tal:define tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type">
                <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                            tal:on-error="">
                  <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
@@ -45,38 +81,18 @@
                          tal:on-error=""
                          tal:condition="scaled_image"/>
                    <div>
-                     <h4>${ref/Title|None}</h4>
+                     <h3>${ref/Title|None}</h3>
                    </div>
                  </a>
                </tal:define>
-             </li>
-         </ul>
-      </tal:check>
-
-      <tal:check tal:condition="view/back_publications|None">
-        <h2 i18n:translate="">Publications</h2>
-         <ul tal:repeat="ref view/back_publications">
-           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" >
-               <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
-                           tal:on-error="">
-                 <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
-                   <img  class="image-popup"
-                         tal:replace="structure python:scaled_image.tag()"
-                         tal:on-error=""
-                         tal:condition="scaled_image"/>
-                   <div>
-                     <h4>${ref/Title|None}</h4>
-                   </div>
-                 </a>
-               </tal:define>
-             </li>
-         </ul>
+             </tal:define>
+         </tal:repeat>
       </tal:check>
 
       <tal:check tal:condition="view/back_news|None">
-        <h2 i18n:translate="">News</h2>
-         <ul tal:repeat="ref view/back_news">
-           <li tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type" >
+         <h2 i18n:translate="">News</h2>
+         <tal:repeat tal:repeat="ref view/back_news">
+           <tal:define tal:define="scale_func ref/@@images|None;item nocall:ref;portal_type item/portal_type">
                <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                            tal:on-error="">
                  <a href="${ref/getURL|ref/absolute_url}" class="margin-0 padding-0">
@@ -85,12 +101,12 @@
                          tal:on-error=""
                          tal:condition="scaled_image"/>
                    <div>
-                     <h4>${ref/Title|None}</h4>
+                     <h3>${ref/Title|None}</h3>
                    </div>
                  </a>
                </tal:define>
-             </li>
-         </ul>
+             </tal:define>
+         </tal:repeat>
       </tal:check>
 
   </metal:block>

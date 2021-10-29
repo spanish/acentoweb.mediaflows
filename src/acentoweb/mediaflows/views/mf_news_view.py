@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from acentoweb.mediaflows import _
-from Products.Five.browser import BrowserView
+#from Products.Five.browser import BrowserView
+from plone.dexterity.browser.view import DefaultView
 
 from zc.relation.interfaces import ICatalog
 from collections import OrderedDict
@@ -14,15 +15,15 @@ from zope.security import checkPermission
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
-class MFNewsView(BrowserView):
+class MFNewsView(DefaultView):
     # If you want to define a template here, please remove the template from
     # the configure.zcml registration of this view.
     # template = ViewPageTemplateFile('mf_activity_view.pt')
 
-    def __call__(self):
+    #def __call__(self):
         # Implement your own actions:
         #self.msg = _(u'A small message')
-        return self.index()
+        #return self.index()
 
 
     #Both relations'ways' are kept, in case you want to refer 'the other way around later'

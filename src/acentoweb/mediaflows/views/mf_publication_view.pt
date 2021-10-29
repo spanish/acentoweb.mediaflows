@@ -22,10 +22,10 @@
       <div tal:replace="structure context/text/output|None" />
 
       <tal:check tal:condition="view/get_relatedauthors|None">
-        <h2 i18n:translate="">MF Authors</h2>
+        <h2 i18n:translate="">Authors</h2>
          <tal:repeat tal:repeat="ref view/get_relatedauthors">
           <tal:define tal:define="ref_obj nocall:ref">
-            <li  tal:define="scale_func ref_obj/@@images|None">
+            <tal:define  tal:define="scale_func ref_obj/@@images|None">
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
                   <figure tal:condition="scaled_image">
@@ -35,13 +35,13 @@
                             tal:on-error=""
                             tal:condition="scaled_image"/>
                       <div>
-                          <h4>${ref_obj/Title|None}</h4>
-                          <p class="Description">${ref_obj/Description|None}</p>
+                          <h3>${ref_obj/Title|None}</h3>
+                          <!--<p class="Description">${ref_obj/Description|None}</p>-->
                       </div>
                     </a>
                   </figure>
                 </tal:define>
-              </li>
+              </tal:define>
             </tal:define>
           </tal:repeat>
         </tal:check>

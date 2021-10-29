@@ -7,28 +7,30 @@
 <body>
   <metal:block fill-slot="content-core">
 
-    <div tal:content="context/date|None" />
+    <div class="documentDescription" tal:content="context/date|None" />
 
-    <div tal:content="context/location|None" />
+    <div class="documentDescription" tal:content="context/location|None" />
 
-    <figure tal:define="scale_func context/@@images;
-                scale context/@@images;
-                scaled_image python:scale_func.scale('image', scale='preview')"
-                tal:on-error=""
-                class="mf_congress_image">
-            <img tal:replace="structure python:scaled_image.tag()"
-                 tal:condition="scaled_image" />
-    </figure>
+    <div style="margin-bottom:1em">
+      <figure tal:define="scale_func context/@@images;
+                  scale context/@@images;
+                  scaled_image python:scale_func.scale('image', scale='preview')"
+              tal:on-error=""
+              class="mf_congress_image">
+        <img tal:replace="structure python:scaled_image.tag()"
+             tal:condition="scaled_image" />
+     </figure>
+    </div>
 
     <div tal:replace="structure context/text/output|None" />
 
     <tal:block tal:repeat="item context/@@contentlisting">
-            <tal:block tal:define="url item/getURL; portal_type item/portal_type">
-                <a href="${url}" class="item-${item/portal_type}">
-                  <p tal:content="item/title" class="title">Item</p>
-                </a>
-                <p tal:content="item/description" class="description">Description</p>
-             </tal:block>
+      <tal:block tal:define="url item/getURL; portal_type item/portal_type">
+        <a href="${url}" class="item-${item/portal_type}">
+          <h2 tal:content="item/title" class="title" />
+        </a>
+        <!--<p tal:content="item/description" class="description">Description</p>-->
+      </tal:block>
     </tal:block>
 
   </metal:block>

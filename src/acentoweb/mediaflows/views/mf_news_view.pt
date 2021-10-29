@@ -23,16 +23,13 @@
       <div tal:replace="structure context/text/output|None" />
       
       <h2 i18n:translate="">Categories</h2>
-
-      <h3 tal:define="categories context/categories"
-          tal:repeat="category categories"
-          tal:content="category" />
+      <h3 tal:replace="structure view/widgets/news_categories/render" />
 
       <tal:check tal:condition="view/get_relatedpersons|None">
-        <h2 i18n:translate="">MF Persons</h2>
+        <h2 i18n:translate="">Persons</h2>
          <tal:repeat tal:repeat="ref view/get_relatedpersons">
           <tal:define tal:define="ref_obj nocall:ref">
-            <li  tal:define="scale_func ref_obj/@@images|None">
+            <tal:define tal:define="scale_func ref_obj/@@images|None">
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
                   <figure tal:condition="scaled_image">
@@ -43,12 +40,12 @@
                             tal:condition="scaled_image"/>
                       <div>
                           <h3>${ref_obj/Title|None}</h3>
-                          <p class="Description">${ref_obj/Description|None}</p>
+                          <!--<p class="Description">${ref_obj/Description|None}</p>-->
                       </div>
                     </a>
                   </figure>
                 </tal:define>
-              </li>
+              </tal:define>
             </tal:define>
           </tal:repeat>
         </tal:check>
