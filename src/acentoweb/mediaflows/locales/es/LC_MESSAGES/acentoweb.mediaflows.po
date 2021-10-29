@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0a2\n"
-"POT-Creation-Date: 2021-10-27 22:28+0000\n"
-"PO-Revision-Date: 2021-10-28 00:32+0200\n"
+"POT-Creation-Date: 2021-10-28 11:10+0000\n"
+"PO-Revision-Date: 2021-10-28 13:10+0200\n"
 "Last-Translator: Acento Web <correo@acentoweb.com>\n"
 "Language-Team: Spanish <correo@acentoweb.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,7 @@ msgstr ""
 "Language: es\n"
 "X-Generator: Poedit 2.3\n"
 
-#: ../views/mf_activity_view.pt:51 ../views/mf_news_view.pt:29
-msgid "<h3>x</h3>"
-msgstr ""
-
-#: ../views/mf_person_view.pt:75
+#: ../views/mf_person_view.pt:73
 msgid "Activities"
 msgstr "Actividades"
 
@@ -32,7 +28,7 @@ msgstr "Categorías de la actividad"
 msgid "Activity types"
 msgstr "Tipos de actividad"
 
-#: ../views/mf_activity_view.pt:74
+#: ../views/mf_activity_view.pt:64
 msgid "Assistants"
 msgstr "Asistentes"
 
@@ -40,7 +36,7 @@ msgstr "Asistentes"
 msgid "Authors"
 msgstr "Autores/as"
 
-#: ../views/mf_activity_view.pt:55 ../views/mf_news_view.pt:25
+#: ../views/mf_activity_view.pt:50 ../views/mf_news_view.pt:25
 msgid "Categories"
 msgstr "Categorías"
 
@@ -52,7 +48,7 @@ msgstr "Categorías de las actividades"
 msgid "Categories of the news"
 msgstr "Categorías de las noticias"
 
-#: ../views/mf_activity_view.pt:99
+#: ../views/mf_activity_view.pt:89
 msgid "Communicators"
 msgstr "Comunicantes"
 
@@ -146,11 +142,11 @@ msgstr "Publicación Mediaflows"
 msgid "Metadata"
 msgstr "Metadatos"
 
-#: ../views/mf_activity_view.pt:124
+#: ../views/mf_activity_view.pt:114
 msgid "Moderators"
 msgstr "Moderadores/as"
 
-#: ../views/mf_person_view.pt:95
+#: ../views/mf_person_view.pt:93
 msgid "News"
 msgstr "Noticias"
 
@@ -162,7 +158,7 @@ msgstr "Categorías de noticias"
 msgid "ORCID"
 msgstr "ORCID"
 
-#: ../views/mf_activity_view.pt:150
+#: ../views/mf_activity_view.pt:140
 msgid "Organizers"
 msgstr "Organizadores/as"
 
@@ -174,17 +170,17 @@ msgstr "Rol de Investigación de la Persona"
 msgid "Person Research SC"
 msgstr "Persona Coordinadora de Subgrupo de Investigación"
 
-#: ../views/mf_news_view.pt:34
+#: ../views/mf_news_view.pt:29
 msgid "Persons"
 msgstr "Personas"
 
-#: ../views/mf_person_view.pt:62
+#: ../views/mf_person_view.pt:60
 msgid "Publications"
 msgstr "Publicaciones"
 
-#: ../views/mf_person_view.pt:52
+#: ../views/mf_person_view.pt:51
 msgid "Research Subgroup Coordinator"
-msgstr "Coordinador/a de subgrupo de investigación"
+msgstr "Coordinador/a de Subgrupo de Investigación"
 
 #: ../views/mf_person_view.pt:47
 msgid "Research role"
@@ -194,7 +190,7 @@ msgstr "Rol de investigación"
 msgid "Research role of the persons"
 msgstr "Rol de investigación de las personas"
 
-#: ../views/mf_activity_view.pt:175
+#: ../views/mf_activity_view.pt:165
 msgid "Speakers"
 msgstr "Ponentes"
 
@@ -206,7 +202,7 @@ msgstr "Especialidades"
 msgid "Start"
 msgstr "Inicio"
 
-#: ../views/mf_activity_view.pt:63 ../views/mf_person_view.pt:57
+#: ../views/mf_activity_view.pt:53 ../views/mf_person_view.pt:55
 msgid "Text"
 msgstr "Texto"
 
@@ -230,7 +226,7 @@ msgstr "Tipos de actividades"
 msgid "Uninstalls the acentoweb.mediaflows add-on."
 msgstr "Desinstala el complemento acentoweb.mediaflows."
 
-#: ../views/mf_activity_view.pt:67
+#: ../views/mf_activity_view.pt:57
 msgid "Video"
 msgstr "Vídeo"
 
@@ -257,97 +253,97 @@ msgid "acentoweb.mediaflows (uninstall)"
 msgstr "acentoweb.mediaflows (desinstalar)"
 
 #. Default: "Categories"
-#: ../content/mf_activity.py:32
+#: ../content/mf_activity.py:31
 msgid "label_activity_categories"
 msgstr "Categorías"
 
 #. Default: "Activity categories"
-#: ../content/mf_activity.py:33
+#: ../content/mf_activity.py:32
 msgid "label_activity_categories_description"
 msgstr "Categorías de la actividad"
 
 #. Default: "Day"
-#: ../content/mf_activity.py:48
+#: ../content/mf_activity.py:47
 msgid "label_activity_day"
 msgstr "Día"
 
 #. Default: "Activity day"
-#: ../content/mf_activity.py:49
+#: ../content/mf_activity.py:48
 msgid "label_activity_day_description"
 msgstr "Día de la actividad"
 
 #. Default: "Location"
-#: ../content/mf_activity.py:60
+#: ../content/mf_activity.py:59
 msgid "label_activity_location"
 msgstr "Ubicación"
 
 #. Default: "Activity location"
-#: ../content/mf_activity.py:61
+#: ../content/mf_activity.py:60
 msgid "label_activity_location_description"
 msgstr "Ubicación de la actividad"
 
 #. Default: "Video"
-#: ../content/mf_activity.py:66
+#: ../content/mf_activity.py:65
 msgid "label_activity_orcid"
 msgstr "Vídeo"
 
 #. Default: "Video URL"
-#: ../content/mf_activity.py:67
+#: ../content/mf_activity.py:66
 msgid "label_activity_orcid_description"
 msgstr "URL del vídeo"
 
 #. Default: "Assistants"
-#: ../content/mf_activity.py:94
+#: ../content/mf_activity.py:93
 msgid "label_activity_related_assistants"
 msgstr "Asistentes"
 
 #. Default: "Communicators"
-#: ../content/mf_activity.py:83
+#: ../content/mf_activity.py:82
 msgid "label_activity_related_communicators"
 msgstr "Comunicantes"
 
 #. Default: "Moderators"
-#: ../content/mf_activity.py:105
+#: ../content/mf_activity.py:104
 msgid "label_activity_related_moderators"
 msgstr "Moderadores/as"
 
 #. Default: "Organizers"
-#: ../content/mf_activity.py:116
+#: ../content/mf_activity.py:115
 msgid "label_activity_related_organizers"
 msgstr "Organizadores/as"
 
 #. Default: "Speakers"
-#: ../content/mf_activity.py:73
+#: ../content/mf_activity.py:72
 msgid "label_activity_related_speakers"
 msgstr "Ponentes"
 
 #. Default: "Start"
-#: ../content/mf_activity.py:42
+#: ../content/mf_activity.py:41
 msgid "label_activity_start"
 msgstr "Inicio"
 
 #. Default: "Activity datetime start"
-#: ../content/mf_activity.py:43
+#: ../content/mf_activity.py:42
 msgid "label_activity_start_description"
 msgstr "Fecha y hora de inicio de la actividad"
 
 #. Default: "Time"
-#: ../content/mf_activity.py:54
+#: ../content/mf_activity.py:53
 msgid "label_activity_time"
 msgstr "Hora"
 
 #. Default: "Activity start time"
-#: ../content/mf_activity.py:55
+#: ../content/mf_activity.py:54
 msgid "label_activity_time_description"
 msgstr "Hora de inicio de la actividad"
 
 #. Default: "Types"
-#: ../content/mf_activity.py:22
+#: ../content/mf_activity.py:21
 msgid "label_activity_types"
 msgstr "Tipos"
 
 #. Default: "Activity types"
-#: ../content/mf_activity.py:23
+#: ../content/mf_activity.py:22
 msgid "label_activity_types_description"
 msgstr "Tipos de actividad"
 
@@ -372,17 +368,17 @@ msgid "label_congress_location_description"
 msgstr "Ubicación del congreso"
 
 #. Default: "Categories"
-#: ../content/mf_news.py:22
+#: ../content/mf_news.py:21
 msgid "label_news_categories"
 msgstr "Categorías"
 
 #. Default: "News categories"
-#: ../content/mf_news.py:23
+#: ../content/mf_news.py:22
 msgid "label_news_categories_description"
 msgstr "Categorías de la noticia"
 
 #. Default: "Persons"
-#: ../content/mf_news.py:32
+#: ../content/mf_news.py:31
 msgid "label_news_related_persons"
 msgstr "Personas"
 
