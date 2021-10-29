@@ -2,7 +2,6 @@
 from plone.dexterity.content import Item
 from plone.supermodel import model
 from zope import schema
-
 from zope.interface import implementer
 from plone.autoform import directives
 from z3c.relationfield.schema import RelationChoice

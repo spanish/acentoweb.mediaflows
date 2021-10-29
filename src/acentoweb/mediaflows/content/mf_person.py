@@ -61,14 +61,14 @@ class IMFPerson(model.Schema):
         title=_(u'label_person_research_role', default=u'Research Role'),
         description=_(u'label_person_research_role_description', default=u'Person research role'),
         vocabulary = 'collective.taxonomy.mf_person_research_role',
-            required = True
+        required = True
     )
 
     person_research_sc = schema.Choice(
         title=_(u'label_person_research_sc', default=u'Research Subgroup Coordinator'),
         description=_(u'label_person_research_sc_description', default=u'This person is a Research Subgroup Coordinator?'),
         vocabulary = 'collective.taxonomy.mf_person_research_sc',
-            required = True
+        required = True
     )
 
 @implementer(IMFPerson)

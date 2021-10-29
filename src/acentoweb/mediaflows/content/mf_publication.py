@@ -20,10 +20,10 @@ class IMFPublication(model.Schema):
     """
 
     relatedAuthors = RelationList(
-        title=_(u'label_related_authors', default=u'MF Authors'),
+        title=_(u'label_publication_related_authors', default=u'Authors'),
         default=[],
         value_type=RelationChoice(
-            title=u'MF Authors',
+            title=u'Authors',
             vocabulary='plone.app.vocabularies.Catalog',
         ),
         required=False,

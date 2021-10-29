@@ -2,7 +2,6 @@
 from plone.dexterity.content import Item
 from plone.supermodel import model
 from zope import schema
-
 from zope.interface import implementer
 from plone.autoform import directives
 from z3c.relationfield.schema import RelationChoice
@@ -43,18 +42,6 @@ class IMFActivity(model.Schema):
         description=_(u'label_activity_start_description', default=u'Activity datetime start'),
         required=True
     )
-
-    day = schema.Date(
-        title=_(u'label_activity_day', default=u'Day'),
-        description=_(u'label_activity_day_description', default=u'Activity day'),
-        required=True,
-    )
-
-    time = schema.Time(
-        title=_(u'label_activity_time', default=u'Time'),
-        description=_(u'label_activity_time_description', default=u'Activity start time'),
-        required=True,
-        )
 
     location = schema.TextLine(
         title=_(u'label_activity_location', default=u'Location'),

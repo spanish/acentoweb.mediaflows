@@ -20,13 +20,16 @@ from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
 
+from zope.i18nmessageid import MessageFactory
+_ = MessageFactory('acentoweb.mediaflows')
+
 class IMFProgram(model.Schema):
     """ Marker interface for MF Program
     """
 
     pdf = NamedBlobFile(
-        title=u'PDF',
-        description=u'PDF Program',
+        title=_(u'label_program_pdf', default=u'PDF'),
+        description=_(u'label_program_pdf_description', default=u'PDF Program'),
         required=False,
         )
 
