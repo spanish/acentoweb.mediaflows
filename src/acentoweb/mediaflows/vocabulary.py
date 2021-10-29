@@ -10,8 +10,6 @@ _ = MessageFactory('medialog.dutchestheme')
 def format_title(folder):
     return "{}  ...   [ {} ]".format( folder.Title, folder.getURL())
 
-
-
 def PersonsVocabulary(context):
 
     mf_persons = api.content.find(portal_type=['MF Person', 'mf_person'], sort_on='sortable_title')
