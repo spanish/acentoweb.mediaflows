@@ -16,10 +16,14 @@
     <index name="person_research_sc" meta_type="FieldIndex">
         <indexed_attr value="person_research_sc"/>
     </index>
+    <index name="publication_categories" meta_type="KeywordIndex">
+        <indexed_attr value="publication_categories"/>
+    </index>
   <!-- Metadata Columns -->
     <column value="activity_types"/>
     <column value="activity_categories"/>
     <column value="news_categories"/>
     <column value="person_research_role"/>
     <column value="person_research_sc"/>
+    <column value="publication_categories"/>
 </object>
