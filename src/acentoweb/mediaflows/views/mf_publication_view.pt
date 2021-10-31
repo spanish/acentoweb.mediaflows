@@ -20,6 +20,9 @@
       </figure>
 -->
       <div tal:replace="structure context/text/output|None" />
+      
+      <h2 i18n:translate="">Categories</h2>
+      <h3 tal:replace="structure view/widgets/publication_categories/render" />
 
       <tal:check tal:condition="view/get_relatedauthors|None">
         <h2 i18n:translate="">Authors</h2>
