@@ -5,12 +5,17 @@
       i18n:domain="acentoweb.mediaflows"
       metal:use-macro="context/main_template/macros/master">
 
-       <metal:css fill-slot="style_slot"> 
-       <style type="text/css">
-       #activity-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
-       #activity-video iframe{position:absolute;top:0;left:0;width:100%;height:100%}
-       </style> 
-       </metal:css> 
+<metal:css fill-slot="style_slot"> 
+  <style type="text/css">
+    .mf-related{width:100%;margin-bottom:1em}
+    .mf-related-image{display:inline-block;margin-right:0.5em}
+    .mf-related-image img{width:64px;border:1px solid #CCC}
+    .mf-related-title{display:inline-block;width:calc(100% - 100px);vertical-align:middle}
+    h4.mf-related-title{margin:0}
+    #activity-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+    #activity-video iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+  </style> 
+</metal:css> 
 
 <body>
   <metal:block fill-slot="content-core">
@@ -68,16 +73,21 @@
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
                   <figure tal:condition="scaled_image">
-                    <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
-                      <img  class="image-popup"
-                            tal:replace="structure python:scaled_image.tag()"
-                            tal:on-error=""
-                            tal:condition="scaled_image"/>
-                      <div>
-                          <h3>${ref_obj/Title|None}</h3>
-                          <!--<p class="Description">${ref_obj/Description|None}</p>-->
+                    <div class="mf-related">
+                      <div class="mf-related-image">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <img class="image-popup"
+                               tal:replace="structure python:scaled_image.tag()"
+                               tal:on-error=""
+                               tal:condition="scaled_image"/>
+                        </a>
                       </div>
-                    </a>
+                      <div class="mf-related-title">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <h4>${ref_obj/Title|None}</h4>
+                        </a>
+                      </div>
+                    </div>
                   </figure>
                 </tal:define>
               </tal:define>
@@ -93,16 +103,21 @@
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
                   <figure tal:condition="scaled_image">
-                    <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
-                      <img  class="image-popup"
-                            tal:replace="structure python:scaled_image.tag()"
-                            tal:on-error=""
-                            tal:condition="scaled_image"/>
-                      <div>
-                          <h3>${ref_obj/Title|None}</h3>
-                          <!--<p class="Description">${ref_obj/Description|None}</p>-->
+                    <div class="mf-related">
+                      <div class="mf-related-image">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <img class="image-popup"
+                               tal:replace="structure python:scaled_image.tag()"
+                               tal:on-error=""
+                               tal:condition="scaled_image"/>
+                        </a>
                       </div>
-                    </a>
+                      <div class="mf-related-title">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <h4>${ref_obj/Title|None}</h4>
+                        </a>
+                      </div>
+                    </div>
                   </figure>
                 </tal:define>
               </tal:define>
@@ -119,16 +134,21 @@
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
                   <figure tal:condition="scaled_image">
-                    <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
-                      <img  class="image-popup"
-                            tal:replace="structure python:scaled_image.tag()"
-                            tal:on-error=""
-                            tal:condition="scaled_image"/>
-                      <div>
-                          <h3>${ref_obj/Title|None}</h3>
-                          <!--<p class="Description">${ref_obj/Description|None}</p>-->
+                    <div class="mf-related">
+                      <div class="mf-related-image">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <img class="image-popup"
+                               tal:replace="structure python:scaled_image.tag()"
+                               tal:on-error=""
+                               tal:condition="scaled_image"/>
+                        </a>
                       </div>
-                    </a>
+                      <div class="mf-related-title">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <h4>${ref_obj/Title|None}</h4>
+                        </a>
+                      </div>
+                    </div>
                   </figure>
                 </tal:define>
               </tal:define>
@@ -144,16 +164,21 @@
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
                   <figure tal:condition="scaled_image">
-                    <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
-                      <img  class="image-popup"
-                            tal:replace="structure python:scaled_image.tag()"
-                            tal:on-error=""
-                            tal:condition="scaled_image"/>
-                      <div>
-                          <h3>${ref_obj/Title|None}</h3>
-                          <!--<p class="Description">${ref_obj/Description|None}</p>-->
+                    <div class="mf-related">
+                      <div class="mf-related-image">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <img class="image-popup"
+                               tal:replace="structure python:scaled_image.tag()"
+                               tal:on-error=""
+                               tal:condition="scaled_image"/>
+                        </a>
                       </div>
-                    </a>
+                      <div class="mf-related-title">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <h4>${ref_obj/Title|None}</h4>
+                        </a>
+                      </div>
+                    </div>
                   </figure>
                 </tal:define>
               </tal:define>
@@ -169,16 +194,21 @@
                 <tal:define tal:define="scaled_image python:scale_func.scale('image', width=150, height=150, direction='down') or None"
                         tal:on-error="">
                   <figure tal:condition="scaled_image">
-                    <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
-                      <img  class="image-popup"
-                            tal:replace="structure python:scaled_image.tag()"
-                            tal:on-error=""
-                            tal:condition="scaled_image"/>
-                      <div>
-                          <h3>${ref_obj/Title|None}</h3>
-                          <!--<p class="Description">${ref_obj/Description|None}</p>-->
+                    <div class="mf-related">
+                      <div class="mf-related-image">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <img class="image-popup"
+                               tal:replace="structure python:scaled_image.tag()"
+                               tal:on-error=""
+                               tal:condition="scaled_image"/>
+                        </a>
                       </div>
-                    </a>
+                      <div class="mf-related-title">
+                        <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                          <h4>${ref_obj/Title|None}</h4>
+                        </a>
+                      </div>
+                    </div>
                   </figure>
                 </tal:define>
               </tal:define>
