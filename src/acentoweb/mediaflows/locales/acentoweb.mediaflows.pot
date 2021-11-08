@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-10-28 11:10+0000\n"
+"POT-Creation-Date: 2021-11-08 14:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: acentoweb.mediaflows\n"
 
-#: ../views/mf_person_view.pt:73
+#: ../views/mf_person_view.pt:86
 msgid "Activities"
 msgstr ""
 
@@ -33,12 +33,13 @@ msgstr ""
 msgid "Assistants"
 msgstr ""
 
-#: ../views/mf_publication_view.pt:25
+#: ../views/mf_publication_view.pt:28
 msgid "Authors"
 msgstr ""
 
 #: ../views/mf_activity_view.pt:50
 #: ../views/mf_news_view.pt:25
+#: ../views/mf_publication_view.pt:24
 msgid "Categories"
 msgstr ""
 
@@ -48,6 +49,10 @@ msgstr ""
 
 #: ../profiles/default/registry.xml
 msgid "Categories of the news"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Categories of the publications"
 msgstr ""
 
 #: ../views/mf_activity_view.pt:89
@@ -72,7 +77,7 @@ msgstr ""
 msgid "Installs the acentoweb.mediaflows add-on."
 msgstr ""
 
-#: ../views/mf_person_view.pt:35
+#: ../views/mf_person_view.pt:47
 msgid "Institution"
 msgstr ""
 
@@ -108,7 +113,7 @@ msgstr ""
 msgid "MF Publication"
 msgstr ""
 
-#: ../views/mf_person_view.pt:28
+#: ../views/mf_person_view.pt:40
 msgid "Mail"
 msgstr ""
 
@@ -148,7 +153,7 @@ msgstr ""
 msgid "Moderators"
 msgstr ""
 
-#: ../views/mf_person_view.pt:93
+#: ../views/mf_person_view.pt:112
 msgid "News"
 msgstr ""
 
@@ -156,7 +161,7 @@ msgstr ""
 msgid "News categories"
 msgstr ""
 
-#: ../views/mf_person_view.pt:24
+#: ../views/mf_person_view.pt:36
 msgid "ORCID"
 msgstr ""
 
@@ -176,15 +181,23 @@ msgstr ""
 msgid "Persons"
 msgstr ""
 
-#: ../views/mf_person_view.pt:60
+#: ../profiles/default/registry.xml
+msgid "Publication categories"
+msgstr ""
+
+#: ../views/mf_person_view.pt:73
 msgid "Publications"
 msgstr ""
 
-#: ../views/mf_person_view.pt:51
+#: ../views/mf_person_view.pt:70
+msgid "Related items"
+msgstr ""
+
+#: ../views/mf_person_view.pt:63
 msgid "Research Subgroup Coordinator"
 msgstr ""
 
-#: ../views/mf_person_view.pt:47
+#: ../views/mf_person_view.pt:59
 msgid "Research role"
 msgstr ""
 
@@ -196,7 +209,7 @@ msgstr ""
 msgid "Speakers"
 msgstr ""
 
-#: ../views/mf_person_view.pt:39
+#: ../views/mf_person_view.pt:51
 msgid "Specialties"
 msgstr ""
 
@@ -205,7 +218,6 @@ msgid "Start"
 msgstr ""
 
 #: ../views/mf_activity_view.pt:53
-#: ../views/mf_person_view.pt:55
 msgid "Text"
 msgstr ""
 
@@ -239,11 +251,11 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: ../views/mf_person_view.pt:31
+#: ../views/mf_person_view.pt:43
 msgid "Web"
 msgstr ""
 
-#: ../views/mf_person_view.pt:43
+#: ../views/mf_person_view.pt:55
 msgid "Work"
 msgstr ""
 
@@ -265,58 +277,48 @@ msgstr ""
 msgid "label_activity_categories_description"
 msgstr ""
 
-#. Default: "Day"
-#: ../content/mf_activity.py:47
-msgid "label_activity_day"
-msgstr ""
-
-#. Default: "Activity day"
-#: ../content/mf_activity.py:48
-msgid "label_activity_day_description"
-msgstr ""
-
 #. Default: "Location"
-#: ../content/mf_activity.py:59
+#: ../content/mf_activity.py:47
 msgid "label_activity_location"
 msgstr ""
 
 #. Default: "Activity location"
-#: ../content/mf_activity.py:60
+#: ../content/mf_activity.py:48
 msgid "label_activity_location_description"
 msgstr ""
 
 #. Default: "Video"
-#: ../content/mf_activity.py:65
+#: ../content/mf_activity.py:53
 msgid "label_activity_orcid"
 msgstr ""
 
 #. Default: "Video URL"
-#: ../content/mf_activity.py:66
+#: ../content/mf_activity.py:54
 msgid "label_activity_orcid_description"
 msgstr ""
 
 #. Default: "Assistants"
-#: ../content/mf_activity.py:93
+#: ../content/mf_activity.py:81
 msgid "label_activity_related_assistants"
 msgstr ""
 
 #. Default: "Communicators"
-#: ../content/mf_activity.py:82
+#: ../content/mf_activity.py:70
 msgid "label_activity_related_communicators"
 msgstr ""
 
 #. Default: "Moderators"
-#: ../content/mf_activity.py:104
+#: ../content/mf_activity.py:92
 msgid "label_activity_related_moderators"
 msgstr ""
 
 #. Default: "Organizers"
-#: ../content/mf_activity.py:115
+#: ../content/mf_activity.py:103
 msgid "label_activity_related_organizers"
 msgstr ""
 
 #. Default: "Speakers"
-#: ../content/mf_activity.py:72
+#: ../content/mf_activity.py:60
 msgid "label_activity_related_speakers"
 msgstr ""
 
@@ -328,16 +330,6 @@ msgstr ""
 #. Default: "Activity datetime start"
 #: ../content/mf_activity.py:42
 msgid "label_activity_start_description"
-msgstr ""
-
-#. Default: "Time"
-#: ../content/mf_activity.py:53
-msgid "label_activity_time"
-msgstr ""
-
-#. Default: "Activity start time"
-#: ../content/mf_activity.py:54
-msgid "label_activity_time_description"
 msgstr ""
 
 #. Default: "Types"
@@ -475,7 +467,17 @@ msgstr ""
 msgid "label_program_pdf_description"
 msgstr ""
 
+#. Default: "Categories"
+#: ../content/mf_publication.py:21
+msgid "label_publication_categories"
+msgstr ""
+
+#. Default: "Publication categories"
+#: ../content/mf_publication.py:22
+msgid "label_publication_categories_description"
+msgstr ""
+
 #. Default: "Authors"
-#: ../content/mf_publication.py:23
+#: ../content/mf_publication.py:31
 msgid "label_publication_related_authors"
 msgstr ""
