@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0a2\n"
-"POT-Creation-Date: 2021-10-28 11:10+0000\n"
-"PO-Revision-Date: 2021-10-28 13:10+0200\n"
+"POT-Creation-Date: 2021-11-08 14:28+0000\n"
+"PO-Revision-Date: 2021-11-08 15:30+0100\n"
 "Last-Translator: Acento Web <correo@acentoweb.com>\n"
 "Language-Team: Spanish <correo@acentoweb.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Language: es\n"
 "X-Generator: Poedit 2.3\n"
 
-#: ../views/mf_person_view.pt:73
+#: ../views/mf_person_view.pt:86
 msgid "Activities"
 msgstr "Actividades"
 
@@ -32,11 +32,12 @@ msgstr "Tipos de actividad"
 msgid "Assistants"
 msgstr "Asistentes"
 
-#: ../views/mf_publication_view.pt:25
+#: ../views/mf_publication_view.pt:28
 msgid "Authors"
 msgstr "Autores/as"
 
 #: ../views/mf_activity_view.pt:50 ../views/mf_news_view.pt:25
+#: ../views/mf_publication_view.pt:24
 msgid "Categories"
 msgstr "Categorías"
 
@@ -47,6 +48,10 @@ msgstr "Categorías de las actividades"
 #: ../profiles/default/registry.xml
 msgid "Categories of the news"
 msgstr "Categorías de las noticias"
+
+#: ../profiles/default/registry.xml
+msgid "Categories of the publications"
+msgstr "Categorías de las publicaciones"
 
 #: ../views/mf_activity_view.pt:89
 msgid "Communicators"
@@ -70,7 +75,7 @@ msgstr "Editar"
 msgid "Installs the acentoweb.mediaflows add-on."
 msgstr "Instala el complemento acentoweb.mediaflows."
 
-#: ../views/mf_person_view.pt:35
+#: ../views/mf_person_view.pt:47
 msgid "Institution"
 msgstr "Institución"
 
@@ -106,7 +111,7 @@ msgstr "MF Programa"
 msgid "MF Publication"
 msgstr "MF Publicación"
 
-#: ../views/mf_person_view.pt:28
+#: ../views/mf_person_view.pt:40
 msgid "Mail"
 msgstr "Correo"
 
@@ -146,7 +151,7 @@ msgstr "Metadatos"
 msgid "Moderators"
 msgstr "Moderadores/as"
 
-#: ../views/mf_person_view.pt:93
+#: ../views/mf_person_view.pt:112
 msgid "News"
 msgstr "Noticias"
 
@@ -154,7 +159,7 @@ msgstr "Noticias"
 msgid "News categories"
 msgstr "Categorías de noticias"
 
-#: ../views/mf_person_view.pt:24
+#: ../views/mf_person_view.pt:36
 msgid "ORCID"
 msgstr "ORCID"
 
@@ -174,15 +179,23 @@ msgstr "Persona Coordinadora de Subgrupo de Investigación"
 msgid "Persons"
 msgstr "Personas"
 
-#: ../views/mf_person_view.pt:60
+#: ../profiles/default/registry.xml
+msgid "Publication categories"
+msgstr "Categorías publicaciones"
+
+#: ../views/mf_person_view.pt:73
 msgid "Publications"
 msgstr "Publicaciones"
 
-#: ../views/mf_person_view.pt:51
+#: ../views/mf_person_view.pt:70
+msgid "Related items"
+msgstr "Elementos relacionados"
+
+#: ../views/mf_person_view.pt:63
 msgid "Research Subgroup Coordinator"
 msgstr "Coordinador/a de Subgrupo de Investigación"
 
-#: ../views/mf_person_view.pt:47
+#: ../views/mf_person_view.pt:59
 msgid "Research role"
 msgstr "Rol de investigación"
 
@@ -194,7 +207,7 @@ msgstr "Rol de investigación de las personas"
 msgid "Speakers"
 msgstr "Ponentes"
 
-#: ../views/mf_person_view.pt:39
+#: ../views/mf_person_view.pt:51
 msgid "Specialties"
 msgstr "Especialidades"
 
@@ -202,7 +215,7 @@ msgstr "Especialidades"
 msgid "Start"
 msgstr "Inicio"
 
-#: ../views/mf_activity_view.pt:53 ../views/mf_person_view.pt:55
+#: ../views/mf_activity_view.pt:53
 msgid "Text"
 msgstr "Texto"
 
@@ -236,11 +249,11 @@ msgstr "Vídeo"
 msgid "View"
 msgstr "Ver"
 
-#: ../views/mf_person_view.pt:31
+#: ../views/mf_person_view.pt:43
 msgid "Web"
 msgstr "Web"
 
-#: ../views/mf_person_view.pt:43
+#: ../views/mf_person_view.pt:55
 msgid "Work"
 msgstr "Trabajo"
 
@@ -262,58 +275,48 @@ msgstr "Categorías"
 msgid "label_activity_categories_description"
 msgstr "Categorías de la actividad"
 
-#. Default: "Day"
-#: ../content/mf_activity.py:47
-msgid "label_activity_day"
-msgstr "Día"
-
-#. Default: "Activity day"
-#: ../content/mf_activity.py:48
-msgid "label_activity_day_description"
-msgstr "Día de la actividad"
-
 #. Default: "Location"
-#: ../content/mf_activity.py:59
+#: ../content/mf_activity.py:47
 msgid "label_activity_location"
 msgstr "Ubicación"
 
 #. Default: "Activity location"
-#: ../content/mf_activity.py:60
+#: ../content/mf_activity.py:48
 msgid "label_activity_location_description"
 msgstr "Ubicación de la actividad"
 
 #. Default: "Video"
-#: ../content/mf_activity.py:65
+#: ../content/mf_activity.py:53
 msgid "label_activity_orcid"
 msgstr "Vídeo"
 
 #. Default: "Video URL"
-#: ../content/mf_activity.py:66
+#: ../content/mf_activity.py:54
 msgid "label_activity_orcid_description"
 msgstr "URL del vídeo"
 
 #. Default: "Assistants"
-#: ../content/mf_activity.py:93
+#: ../content/mf_activity.py:81
 msgid "label_activity_related_assistants"
 msgstr "Asistentes"
 
 #. Default: "Communicators"
-#: ../content/mf_activity.py:82
+#: ../content/mf_activity.py:70
 msgid "label_activity_related_communicators"
 msgstr "Comunicantes"
 
 #. Default: "Moderators"
-#: ../content/mf_activity.py:104
+#: ../content/mf_activity.py:92
 msgid "label_activity_related_moderators"
 msgstr "Moderadores/as"
 
 #. Default: "Organizers"
-#: ../content/mf_activity.py:115
+#: ../content/mf_activity.py:103
 msgid "label_activity_related_organizers"
 msgstr "Organizadores/as"
 
 #. Default: "Speakers"
-#: ../content/mf_activity.py:72
+#: ../content/mf_activity.py:60
 msgid "label_activity_related_speakers"
 msgstr "Ponentes"
 
@@ -326,16 +329,6 @@ msgstr "Inicio"
 #: ../content/mf_activity.py:42
 msgid "label_activity_start_description"
 msgstr "Fecha y hora de inicio de la actividad"
-
-#. Default: "Time"
-#: ../content/mf_activity.py:53
-msgid "label_activity_time"
-msgstr "Hora"
-
-#. Default: "Activity start time"
-#: ../content/mf_activity.py:54
-msgid "label_activity_time_description"
-msgstr "Hora de inicio de la actividad"
 
 #. Default: "Types"
 #: ../content/mf_activity.py:21
@@ -472,7 +465,17 @@ msgstr "PDF"
 msgid "label_program_pdf_description"
 msgstr "PDF del programa"
 
+#. Default: "Categories"
+#: ../content/mf_publication.py:21
+msgid "label_publication_categories"
+msgstr "Categorías publicaciones"
+
+#. Default: "Publication categories"
+#: ../content/mf_publication.py:22
+msgid "label_publication_categories_description"
+msgstr "Categorías de las publicaciones"
+
 #. Default: "Authors"
-#: ../content/mf_publication.py:23
+#: ../content/mf_publication.py:31
 msgid "label_publication_related_authors"
 msgstr "Autores/as"
