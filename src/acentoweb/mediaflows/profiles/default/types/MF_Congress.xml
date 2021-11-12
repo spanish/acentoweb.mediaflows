@@ -24,6 +24,7 @@
     <element value="MF Program" />
     <element value="Document" />
     <element value="Image" />
+    <element value="File" />
     <element value="EasyForm" />
   <!--
     <element value="File" />
