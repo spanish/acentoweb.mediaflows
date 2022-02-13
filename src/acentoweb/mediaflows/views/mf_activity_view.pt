@@ -7,46 +7,44 @@
 
 <metal:css fill-slot="style_slot"> 
   <style type="text/css">
+    #viewlet-below-content-title{display:none}
+    #mf-activity-date-location{margin-bottom:1em}
+    #activity-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+    #activity-video iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+    .mf-field-title{font-weight:bold;color:#990000}
     .mf-related{width:100%;margin-bottom:1em}
     .mf-related-image{display:inline-block;margin-right:0.5em}
     .mf-related-image img{width:64px;border:1px solid #CCC}
     .mf-related-title{display:inline-block;width:calc(100% - 100px);vertical-align:middle}
     h4.mf-related-title{margin:0}
-    #activity-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
-    #activity-video iframe{position:absolute;top:0;left:0;width:100%;height:100%}
   </style> 
 </metal:css> 
 
 <body>
   <metal:block fill-slot="content-core">
-<!--
-     <figure tal:define="scale_func context/@@images;
-                scale context/@@images;
-                scaled_image python:scale_func.scale('image', scale='preview')"
-                tal:on-error=""
-                class="mf_activity_image">
-            <img tal:replace="structure python:scaled_image.tag()"
-                 tal:condition="scaled_image" />
-             <figcaption class="padding-10-0" tal:condition="context/image_caption|nothing"
-                 tal:content="context/image_caption">
-             </figcaption>
-      </figure>
--->
       
-      <div>
-        <span i18n:translate="">Start</span>: <span class="pat-moment" data-pat-moment="format:DD/MM/YYYY - HH:mm;">${context/start}</span>
+      <!--<div>
+        <span class="mf-field-title" i18n:translate="">Start</span>: <span class="pat-moment" data-pat-moment="format:DD/MM/YYYY - HH:mm;">${context/start}</span>
+      </div>-->
+
+      <div id="mf-activity-date-location">
+        <div>
+          <span class="mf-field-title" i18n:translate="">Day</span>: <span class="pat-moment" data-pat-moment="format:DD/MM/YYYY;">${context/start}</span>
+        </div>
+
+        <div>
+          <span class="mf-field-title" i18n:translate="">Time</span>: <span class="pat-moment" data-pat-moment="format:HH:mm;">${context/start}</span>
+        </div>
+
+        <div tal:condition="context/location|None">
+          <span class="mf-field-title" i18n:translate="">Location</span>: ${context/location}
+        </div>
       </div>
 
-      <div>
-        <span i18n:translate="">Day</span>: <span class="pat-moment" data-pat-moment="format:DD/MM/YYYY;">${context/start}</span>
-      </div>
+      <div id="mf-activity-text" class="mf-text text" tal:replace="structure context/text/output|None" />
 
-      <div>
-        <span i18n:translate="">Time</span>: <span class="pat-moment" data-pat-moment="format:HH:mm;">${context/start}</span>
-      </div>
-
-      <div tal:condition="context/location|None">
-        <span i18n:translate="">Location</span>: ${context/location}
+      <div tal:condition="context/video" id="activity-video">
+        <iframe width="100%" height="auto" tal:attributes="src context/video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <h2 i18n:translate="">Types</h2>
@@ -55,18 +53,11 @@
       <h2 i18n:translate="">Categories</h2>
       <h3 tal:replace="structure view/widgets/activity_categories/render" />
 
-      <h2 i18n:translate="">Text</h2>
 
-      <div id="mf-activity-text" class="mf-text text" tal:replace="structure context/text/output|None" />
-
-      <h2 tal:condition="context/video" i18n:translate="">Video</h2>
-
-      <div tal:condition="context/video" id="activity-video">
-        <iframe width="100%" height="auto" tal:attributes="src context/video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <h2 tal:define="get_relatedassistants view/get_relatedassistants;get_relatedcommunicators view/get_relatedcommunicators;get_relatedmoderators view/get_relatedmoderators;get_relatedorganizers view/get_relatedorganizers;get_relatedspeakers view/get_relatedspeakers;" tal:condition="python:get_relatedassistants or get_relatedcommunicators or get_relatedmoderators or get_relatedorganizers or get_relatedspeakers" i18n:translate="">Related items</h2>
 
       <tal:check tal:condition="view/get_relatedassistants|None">
-        <h2 i18n:translate="">Assistants</h2>
+        <h3 i18n:translate="">Assistants</h3>
          <tal:repeat tal:repeat="ref view/get_relatedassistants">
           <tal:define tal:define="ref_obj nocall:ref">
             <tal:define  tal:define="scale_func ref_obj/@@images|None">
@@ -96,7 +87,7 @@
         </tal:check>
 
       <tal:check tal:condition="view/get_relatedcommunicators|None">
-        <h2 i18n:translate="">Communicators</h2>
+        <h3 i18n:translate="">Communicators</h3>
          <tal:repeat tal:repeat="ref view/get_relatedcommunicators">
           <tal:define tal:define="ref_obj nocall:ref">
             <tal:define  tal:define="scale_func ref_obj/@@images|None">
@@ -126,7 +117,7 @@
         </tal:check>
 
       <tal:check tal:condition="view/get_relatedmoderators|None">
-        <h2 i18n:translate="">Moderators</h2>
+        <h3 i18n:translate="">Moderators</h3>
          <tal:repeat tal:repeat="ref view/get_relatedmoderators">
 
           <tal:define tal:define="ref_obj nocall:ref">
@@ -157,7 +148,7 @@
         </tal:check>
 
       <tal:check tal:condition="view/get_relatedorganizers|None">
-        <h2 i18n:translate="">Organizers</h2>
+        <h3 i18n:translate="">Organizers</h3>
          <tal:repeat tal:repeat="ref view/get_relatedorganizers">
           <tal:define tal:define="ref_obj nocall:ref">
             <tal:define  tal:define="scale_func ref_obj/@@images|None">
@@ -187,7 +178,7 @@
         </tal:check>
 
       <tal:check tal:condition="view/get_relatedspeakers|None">
-        <h2 i18n:translate="">Speakers</h2>
+        <h3 i18n:translate="">Speakers</h3>
          <tal:repeat tal:repeat="ref view/get_relatedspeakers">
           <tal:define tal:define="ref_obj nocall:ref">
             <tal:define  tal:define="scale_func ref_obj/@@images|None">
